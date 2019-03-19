@@ -9,5 +9,21 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'session' => [
+            'class' => 'yii\redis\Session',
+            'redis' => [
+                'hostname' => '192.168.33.10',
+                'port' => 6379,
+                'database' => 0,
+            ],
+        ],
+        'db' => $db['itbook'],
+        'itbook_log' => $db['itbook_log'],
+        'redis' => [
+            'class' => 'yii\redis\Connection',
+            'hostname' => '192.168.33.10',
+            'port' => 6379,
+            'database' => 0,
+        ],
     ],
 ];
