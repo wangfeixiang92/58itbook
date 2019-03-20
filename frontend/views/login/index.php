@@ -11,7 +11,7 @@
             <div class="col-sm-10">
                 <p class="login-label">还没有账号？<a href="<?= Yii::$app->urlManager->createUrl(['login/register'])?>">前往注册</a></p>
                 <?php if(isset($error)):?>
-                    <p class="center error-label"><i class="fa fa-exclamation-circle"></i>有错误：<?=$error?></p>
+                    <p class="center error-label"><i class="fa fa-exclamation-circle"></i>错误：<?=$error?></p>
                 <?php endif;?>
             </div>
         </div>

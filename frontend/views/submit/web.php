@@ -12,7 +12,7 @@ $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]);
     }
 </style>
 <div class="container">
-    <form class="form-horizontal submit-from" style="margin-bottom: 50px"  action="<?= Yii::$app->urlManager->createUrl(['submit/web'])?>" method="post"  enctype="multipart/form-data">
+    <form class="form-horizontal submit-from" id="form" style="margin-bottom: 50px"  action="<?= Yii::$app->urlManager->createUrl(['submit/web'])?>" method="post"  enctype="multipart/form-data">
         <div class="form-group">
             <label  class="col-sm-2 control-label"></label>
             <div class="col-sm-10">
@@ -29,7 +29,7 @@ $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]);
                 </p>
                 <p class="center"><i class="glyphicon glyphicon-volume-down"></i>提示：上传文件为zip或rar格式，请确保有演示文件，并能正常访问代码无错误！</p>
                 <?php if(isset($error)):?>
-                <p class="center error-label"><i class="fa fa-exclamation-circle"></i>有错误：<?=$error?></p>
+                <p class="center error-label"><i class="fa fa-exclamation-circle"></i>错误：<?=$error?></p>
                 <?php endif;?>
             </div>
         </div>
@@ -80,27 +80,32 @@ $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]);
         <div class="form-group">
             <label class="col-sm-2 control-label">上传文件</label>
             <div class="col-sm-10">
-                <input type="file" name="resources">
-                <p class="help-block">文件大小不得超过30M</p>
+                <input type="file" id="resource" name="resources" onchange="fileSelected()">
+                <div class="help-block top20per" id="file-info" style="display:none">
+                    <p><label>文件名：</label><span class="fileName">xxxxx.zip</span></p>
+                    <p><label>文件类型：</label><span class="fileType">xxxxx.zip</span></p>
+                    <p><label>文件大小：</label><span class="fileSize">xxxxx.zip</span></p>
+                </div>
+                <p class="help-block"><i class="glyphicon glyphicon-volume-down"></i>提示：文件大小不得超过30M</p>
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label">使用方法 </label>
             <div class="col-sm-10">
-                <textarea name="manual" id="manual" cols="30" rows="10" class="form-control" placeholder="提供插件使用方法介绍等信息(奖励2倍以上IT币) " value="<?=isset($model->manual) ? $model->manual : '' ?>"></textarea>
+                <textarea name="manual" id="manual" cols="30" rows="10" class="form-control" placeholder="提供插件使用方法介绍等信息(奖励2倍以上IT币) "><?=!empty($model->manual) ? $model->manual: ''?></textarea>
             </div>
         </div>
         
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <input type="hidden" name='<?=Yii::$app->request->csrfParam?>' value="<?=Yii::$app->request->csrfToken?>"/>
-                <button type="submit" class="btn btn-default btn-block black" data-toggle="modal" data-target="#myModal">提交</button>
+                <button type="submit" onclick="uploadFile()" class="btn btn-default btn-block black" data-toggle="modal" data-target="#sumit-process-model">提交</button>
             </div>
         </div>
     </form>
 </div> <!-- /container -->
-<!--<button data-toggle="modal" data-target="#sumit-process-model">提交</button>-->
+
 <div class="modal fade" tabindex="-1" role="dialog"  id="sumit-process-model" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -109,8 +114,8 @@ $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]);
             </div>
             <div class="modal-body">
                 <div class="progress" id="form-progress">
-                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                        <span class="sr-only">40% Complete (success)</span>
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                        <span class="sr-only">0% Complete (success)</span>
                     </div>
                 </div>
             </div>
@@ -120,18 +125,20 @@ $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]);
 
 <script>
 
-    $(document).ready(function(){ CKEDITOR.replace('manual')});
+    $(document).ready(function(){
+       var ckeditot =  CKEDITOR.replace('manual');
+    });
     //询问框
     function explain(label){
         if(label == 'submit') {
             var title='发布说明';
-            var content = '<p>第1条：上传文件为zip或rar格式，请确保有演示文件，并能正常访问代码无错误</p><p>第2条：如果有插件官网地址，请填写，如果没有，可不填</p><p>第3条：如果非原创，请选择标记非原创。如果是原创请选择标记原创，原创内容会获得额外IT币奖励</p><p>第4条：我们鼓励原创，原创内容会获得额外IT币奖励</p>';
+            var content = <?= json_encode($agreement['explain'])?>;
         }else if(label == 'reward'){
             var title='奖励说明';
-            var content = '<p>第1条：奖励分为基础奖励和额外奖励。基础奖励实时发放，额外奖励审核通过后发放。</p><p>第2条：基础奖励为5IT币*用户奖励倍数（个人中心可查看自己的奖励倍数，基础为1，等级越高，奖励倍数越高）</p><p>第3条：额外奖励在审核通过后会发放到用户账号，到账会有邮件和消息提醒，注意查收。</p><p>第4条：每个插件的IT币收益归作者所有，但是存在最高收益，最高收益是插件单次IT币*100</p><p>第5条：原创插件，网站鼓励作者申请插件买断，买断的插件，我们会发放现金币，现金币则可以用来购买IT币，亦可以提现</p>';
+            var content =<?= json_encode($agreement['reward'])?>;
         }else if(label == 'punishment'){
             var title='惩罚说明';
-            var content = '<p>第1条：网站严厉打击套取基础奖励的行为。经审核发现，会扣取用户的奖励倍数（-0.1/每次）,当减为0后,用户发布任何插件或者参加任何活动将得不到奖励</p><p>第2条：网站严厉打击套取原创额外奖励的行为，非原创请勿标记原创，套取额外奖励，一经发现，会扣取用户的奖励倍数（-0.2/每次）,当减为0后,用户发布任何插件或者参加任何活动将得不到奖励。同时因为虚假原创引起的版权问题，由发布者个人承担</p><p>第3条：惩罚结果会通过邮件，个人中心消息等渠道发送给作者，如有疑惑，可联系客服申诉。</p>';
+            var content = <?= json_encode($agreement['punishment'])?>;
         }
         layer.open({
             type: 1,
@@ -145,7 +152,60 @@ $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]);
         });
     }
 
+    function fileSelected() {
+        var file = document.getElementById('resource').files[0];
+        if (file) {
+            var fileSize = 0;
+            if (file.size > 1024 * 1024){
+                fileSize = (Math.round(file.size * 100 / (1024 * 1024)) / 100).toString() + 'MB';
+            }else{
+                fileSize = (Math.round(file.size * 100 / 1024) / 100).toString() + 'KB';
+            }
+            $('#file-info').css('display','block');
+            $('#file-info').find('.fileName').html(file.name);
+            $('#file-info').find('.fileType').html(file.type);
+            $('#file-info').find('.fileSize').html(fileSize);
+        }else{
+            $('#file-info').css('display','none');
+        }
+    }
 
+    function uploadFile() {
+        var fd = new FormData();
+        var xhr = new XMLHttpRequest();
+        /* 事件监听 */
+        xhr.upload.addEventListener("progress", uploadProgress, false);
+        xhr.addEventListener("load", uploadComplete, false);
+        xhr.addEventListener("error", uploadFailed, false);
+        xhr.addEventListener("abort", uploadCanceled, false);
+        /* 下面的url一定要改成你要发送文件的服务器url */
+        xhr.open("POST", "<?= Yii::$app->urlManager->createUrl(['submit/web'])?>");
+        xhr.send(fd);
+    }
+
+    function uploadProgress(evt) {
+        if (evt.lengthComputable) {
+            var percentComplete = Math.round(evt.loaded * 100 / evt.total);
+            $('#form-progress').find('.progress-bar').css('width',percentComplete.toString()+'%');
+        }
+        else {
+            $('#form-progress').find('.progress-bar').css('width',0);
+        }
+    }
+
+    function uploadComplete(evt) {
+        /* 当服务器响应后，这个事件就会被触发 */
+        //alert(evt.target.responseText);
+        alert("上传成功");
+    }
+
+    function uploadFailed(evt) {
+        alert("上传文件发生了错误尝试");
+    }
+
+    function uploadCanceled(evt) {
+        alert("上传被用户取消或者浏览器断开连接");
+    }
 
 </script>
 

@@ -79,10 +79,10 @@ class WebSource extends Model
     {
         if (!$this->hasErrors()) {
             if(!in_array(trim($this->resources->type),['application/x-zip-compressed','application/octet-stream']) || !in_array(trim($this->resources->extension),['zip', 'rar'])){
-                $this->addError('上传的文件格式错误');
+                $this->addError('error','上传的文件格式错误');
             }
             if($this->resources->size > 30*1024*1024){
-                $this->addError('所上传文件的大小不得大于30M');
+                $this->addError('error','所上传文件的大小不得大于30M');
             }
             return true;
         }

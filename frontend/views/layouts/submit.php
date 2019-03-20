@@ -72,10 +72,18 @@ use yii\widgets\Breadcrumbs;
                         </div>
                         <button type="submit" class="btn btn-default">搜索</button>
                     </form>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="<?=\yii\helpers\Url::to(['login/index'])?>">登录</a></li>
-                        <li><a href="<?=\yii\helpers\Url::to(['login/register'])?>">注册</a></li>
-                    </ul>
+                    <?php if($this->params['userInfo']):?>
+                        <div class="col-xs-2 placeholder pull-right" >
+                            <a href="">
+                                <img class="img-circle" style="width:50px;height: 50px" src="<?=$this->params['userInfo']['photo']?>"  class="img-responsive" alt="Generic placeholder thumbnail">
+                            </a>
+                        </div>
+                    <?php else:?>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="<?=\yii\helpers\Url::to(['login/index'])?>">登录</a></li>
+                            <li><a href="<?=\yii\helpers\Url::to(['login/register'])?>">注册</a></li>
+                        </ul>
+                    <?php endif;?>
                 </div>
             </div><!--/.nav-collapse -->
         </div>

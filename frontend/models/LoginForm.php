@@ -4,6 +4,7 @@ namespace frontend\models;
 
 use common\models\DbLevelName;
 use common\models\DbUser;
+use common\models\LogUserLogin;
 use Yii;
 use yii\base\Model;
 
@@ -237,7 +238,7 @@ class LoginForm extends Model
         $user = DbUser::findOne(['uId'=>$result['uId']]);
         $user->logoutTime = time();
         $user->save();
-        $userLogin = \common\models\LoginForm::find()->where(['uid'=>$result['uId']])->orderBy(['id'=>SORT_DESC])->one();
+        $userLogin =LogUserLogin::find()->where(['uid'=>$result['uId']])->orderBy(['id'=>SORT_DESC])->one();
         $userLogin->logoutTime= time();
         $userLogin->save();
         return Yii::$app->session->remove($redisKey);

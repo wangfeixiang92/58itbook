@@ -18,6 +18,7 @@ return [
                 'port' => 6379,
                 'database' => 0,
             ],
+            'timeout'=>604800
         ],
         'db' => $db['itbook'],
         'itbook_log' => $db['itbook_log'],
