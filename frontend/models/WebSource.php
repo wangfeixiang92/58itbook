@@ -5,6 +5,7 @@
  * */
 namespace frontend\models;
 
+use common\models\DbWebSource;
 use Yii;
 use yii\base\Model;
 /**

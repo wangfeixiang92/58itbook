@@ -4,6 +4,7 @@ return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+        '@mdm/admin' => '@vendor/mdmsoft/yii2-admin',
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
@@ -20,6 +21,7 @@ return [
         ],
         'db' => $db['itbook'],
         'itbook_log' => $db['itbook_log'],
+        'itbook_admin' => $db['itbook_admin'],
         'redis' => [
             'class' => 'yii\redis\Connection',
             'hostname' => '192.168.33.10',
@@ -27,4 +29,5 @@ return [
             'database' => 0,
         ],
     ],
+
 ];
