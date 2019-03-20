@@ -2,6 +2,8 @@
 
 namespace frontend\models;
 
+use common\models\LogUserLogin;
+use wsl\ip2location\Ip2Location;
 use Yii;
 use yii\base\Model;
 /**

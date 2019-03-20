@@ -2,6 +2,7 @@
 
 namespace frontend\models;
 
+use common\models\DbUser;
 use Yii;
 use yii\base\Model;
 class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface

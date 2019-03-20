@@ -35,19 +35,19 @@ class LoginController extends CommonController
             $model->load(Yii::$app->request->post(), '');
             $checkRes = $model->validate();
             if (!$checkRes) {
-                return $this->render('login', [
+                return $this->render('index', [
                     'error' => reset($model->getErrors())[0],
                     'model' => $model
                 ]);
             }
             $result = $model->login();
             if(!$result){
-                return $this->render('login',['model'=>$model]);
+                return $this->render('index',['model'=>$model]);
             }
             if(!empty(Yii::$app->request->referrer)){
                 return $this->redirect( Yii::$app->user->returnUrl);
             }
-            return $this->goHome();
+            return $this->redirect('person.html');
         }
         return $this->render('index', [
             'model' => $model,
@@ -83,7 +83,7 @@ class LoginController extends CommonController
             if(!empty(Yii::$app->request->referrer)){
                 return $this->redirect( Yii::$app->user->returnUrl);
             }
-            return $this->redirect('login.html');
+            return $this->redirect('person.html');
         }
         return $this->render('register',['model'=>$model]);
     }
@@ -121,7 +121,7 @@ class LoginController extends CommonController
             if(empty(Yii::$app->request->referrer)){
                 return $this->redirect( Yii::$app->user->returnUrl);
             }
-            return $this->redirect(Yii::$app->request->referrer);
+            return $this->redirect('index.html');
         }
         return $this->render('forgetpassword',['model'=>$model]);
     }

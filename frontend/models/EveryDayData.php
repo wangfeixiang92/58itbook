@@ -2,6 +2,7 @@
 
 namespace frontend\models;
 
+use common\models\LogEverDayData;
 use Yii;
 use yii\base\Model;
 /**
@@ -39,10 +40,19 @@ class EveryDayData extends Model
    *
    * */
     public function addRegisterLog(){
-        $redis = \Yii::$app->redis;
-        $redis->hincrby(  $this->redisKey ,'registerNum',1);
-        $redis->hincrby(  $this->redisKey ,'loginNum',1);
-        $redis->expire(  $this->redisKey ,36*60*60);
+        $day =self::_checkDateIsExist(date('Y-m-d',time()));
+        if(!$day){
+            $log = new LogEverDayData();
+            $log->date =date('Y-m-d',time());
+            $log->registerNum=1;
+            return $log->save();
+        }else {
+            return $day::updateAllCounters(['registerNum' => 1]);
+        }
+//        $redis = \Yii::$app->redis;
+//        $redis->hincrby(  $this->redisKey ,'registerNum',1);
+//        $redis->hincrby(  $this->redisKey ,'loginNum',1);
+//        $redis->expire(  $this->redisKey ,36*60*60);
     }
 
     /*
@@ -50,9 +60,19 @@ class EveryDayData extends Model
      *
      * */
     public function addLoginLog(){
-        $redis = \Yii::$app->redis;
-        $redis->hincrby(  $this->redisKey ,'loginNum',1);
-        $redis->expire(  $this->redisKey ,36*60*60);
+        $day =self::_checkDateIsExist(date('Y-m-d',time()));
+        if(!$day){
+                $log = new LogEverDayData();
+                $log->date =date('Y-m-d',time());
+                $log->loginNum=1;
+                return $log->save();
+
+        }else{
+            return $day::updateAllCounters( ['loginNum' =>1]);
+        }
+//        $redis = \Yii::$app->redis;
+//        $redis->hincrby(  $this->redisKey ,'loginNum',1);
+//        $redis->expire(  $this->redisKey ,36*60*60);
     }
 
     /*
@@ -60,9 +80,20 @@ class EveryDayData extends Model
      *
      * */
     public function addSubmitWebNum(){
-        $redis = \Yii::$app->redis;
-        $redis->hincrby(  $this->redisKey ,'submitWebNum',1);
-        $redis->expire(  $this->redisKey ,36*60*60);
+        $day =self::_checkDateIsExist(date('Y-m-d',time()));
+        if(!$day){
+            $log = new LogEverDayData();
+            $log->date =date('Y-m-d',time());
+            $log->submitWebNum=1;
+            return $log->save();
+
+        }else{
+            return $day::updateAllCounters( ['submitWebNum' =>1]);
+        }
+
+//        $redis = \Yii::$app->redis;
+//        $redis->hincrby(  $this->redisKey ,'submitWebNum',1);
+//        $redis->expire(  $this->redisKey ,36*60*60);
     }
 
     /*
@@ -70,9 +101,27 @@ class EveryDayData extends Model
      *
      * */
     public function addNewWebNum(){
-        $redis = \Yii::$app->redis;
-        $redis->hincrby(  $this->redisKey ,'newWebNum',1);
-        $redis->expire(  $this->redisKey ,36*60*60);
+        $day =self::_checkDateIsExist(date('Y-m-d',time()));
+        if(!$day){
+            $log = new LogEverDayData();
+            $log->date =date('Y-m-d',time());
+            $log->newWebNum=1;
+            return $log->save();
+
+        }else{
+            return $day::updateAllCounters( ['newWebNum' =>1]);
+        }
+//        $redis = \Yii::$app->redis;
+//        $redis->hincrby(  $this->redisKey ,'newWebNum',1);
+//        $redis->expire(  $this->redisKey ,36*60*60);
+    }
+
+    /*
+     * 检测指定日期的数据是否存在
+     *
+     * */
+    static public function _checkDateIsExist($date){
+        return LogEverDayData::findOne(['date'=>date('Y-m-d',time())]);
     }
 
 

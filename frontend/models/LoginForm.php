@@ -2,6 +2,8 @@
 
 namespace frontend\models;
 
+use common\models\DbLevelName;
+use common\models\DbUser;
 use Yii;
 use yii\base\Model;
 
@@ -235,7 +237,7 @@ class LoginForm extends Model
         $user = DbUser::findOne(['uId'=>$result['uId']]);
         $user->logoutTime = time();
         $user->save();
-        $userLogin = LogUserLogin::find()->where(['uid'=>$result['uId']])->orderBy(['id'=>SORT_DESC])->one();
+        $userLogin = \common\models\LoginForm::find()->where(['uid'=>$result['uId']])->orderBy(['id'=>SORT_DESC])->one();
         $userLogin->logoutTime= time();
         $userLogin->save();
         return Yii::$app->session->remove($redisKey);
@@ -277,6 +279,7 @@ class LoginForm extends Model
             //增加统计记录
             (new UserLoginLog())->addLog( $this->uId);
             (new EveryDayData())->addRegisterLog();
+            (new EveryDayData())->addLoginLog();
         }
         return $result;
     }
@@ -294,6 +297,8 @@ class LoginForm extends Model
         $user->salt =Yii::$app->security->generateRandomString();
         $user->password = Yii::$app->security->generatePasswordHash($this->password.$user->salt);
         $user->updateTime = $this->updateTime;
+        //添加记录
+        (new UserForgetPasswordLog())->addLog($user->uId);
         return $result = $user->save();
     }
 

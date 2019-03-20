@@ -1,4 +1,5 @@
 <?php
+$db =    require __DIR__ . '/db.php';
 return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
