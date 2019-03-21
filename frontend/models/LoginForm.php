@@ -2,7 +2,7 @@
 
 namespace frontend\models;
 
-use common\models\DbLevelName;
+use common\models\DbUserLevelName;
 use common\models\DbUser;
 use common\models\LogUserLogin;
 use Yii;
@@ -266,7 +266,7 @@ class LoginForm extends Model
         $user->registerTime = $this->registerTime;
         $user->loginTime = $this->loginTime;
         $user->level=1;
-        $user->levelName=DbLevelName::findOne(['level'=>1,'isDelete'=>0])['levelName'];
+        $user->levelName=DbUserLevelName::findOne(['level'=>1,'isDelete'=>0])['levelName'];
         $result = $user->save();
         if($result){
             $this->uId =Yii::$app->db->getLastInsertID();

@@ -17,6 +17,8 @@ use yii\widgets\Breadcrumbs;
     <title>layout 后台大布局 - Layui</title>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('/layui/css/layui.css') ?>">
+    <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('/css/common.css') ?>">
+    <script src="<?= \common\models\CommonHelper::getAssetUrl('/layui/layui.js') ?>"></script>
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
@@ -65,11 +67,11 @@ use yii\widgets\Breadcrumbs;
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;">审核</a>
+                    <a href="javascript:;">网站模板</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">列表一</a></dd>
-                        <dd><a href="javascript:;">列表二</a></dd>
-                        <dd><a href="">超链接</a></dd>
+                        <dd><a href="<?=\yii\helpers\Url::to(['submit/list'])?>">资源管理</a></dd>
+                        <dd><a href="<?=\yii\helpers\Url::to(['submit/submit'])?>">资源发布</a></dd>
+                        <dd><a href="<?=\yii\helpers\Url::to(['submit/subject'])?>">分类管理</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item"><a href="">云市场</a></li>
@@ -94,8 +96,6 @@ use yii\widgets\Breadcrumbs;
 
 
 <?php $this->endPage() ?>
-
-<script src="<?= \common\models\CommonHelper::getAssetUrl('/layui/layui.js') ?>"></script>
 <script>
     //JavaScript代码区域
     layui.use('element', function(){

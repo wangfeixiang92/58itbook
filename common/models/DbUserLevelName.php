@@ -18,7 +18,7 @@ use yii\base\Model;
  * @property integer $isDelete
  */
 
-class DbLevelName extends \yii\db\ActiveRecord
+class DbUserLevelName extends \yii\db\ActiveRecord
 {
     public static function getDb()
     {
@@ -29,7 +29,7 @@ class DbLevelName extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'levelName';
+        return 'userLevelName';
     }
 
 }
