@@ -40,7 +40,7 @@ class SubmitController extends CommonController
     }
 
     /*
-   *  分类管理
+   * 科目
    * */
     public function actionSubject(){
         $total =  DbWebSubject::find()->where(['isDelete'=>0])->count();
@@ -54,7 +54,25 @@ class SubmitController extends CommonController
         return $this->render('subject',['list'=>$list,'pages'=>$page]);
     }
 
+    /*
+     * 添加子分类
+     * */
+    public function actionAddChildSubject(){
+        $model = new WebSource();
+        $agreement = Yii::$app->params['web-agreement'];
+        $model->scenario = 'edit';
+        $id= Yii::$app->request->get('id');
+        $model->id=$id;
+        $checkRes = $model->validate();
+        if (!$checkRes) {
+            return $this->render('web', [
+                'error' => reset($model->getErrors())[0],
+                'model' => $model,
+                'agreement'=>$agreement
+            ]);
+        }
 
+    }
 
 
     /**

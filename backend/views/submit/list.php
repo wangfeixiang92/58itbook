@@ -2,10 +2,8 @@
 use yii\widgets\LinkPager;
 ?>
     <span class="layui-breadcrumb">
-  <a href="">首页</a>
-  <a href="">国际新闻</a>
-  <a href="">亚太地区</a>
-  <a><cite>正文</cite></a>
+  <a href="">网站模板</a>
+  <a><cite>资源管理</cite></a>
 </span>
 
 <table class="layui-table center-table">

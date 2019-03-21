@@ -5,7 +5,11 @@ use yii\widgets\LinkPager;
   <a href="">网站模板</a>
   <a><cite>分类管理</cite></a>
 </span>
-
+<div class="row top20per">
+    <button class="layui-btn layui-btn-sm">
+        <i class="layui-icon">&#xe608;</i> 添加
+    </button>
+</div>
 <table class="layui-table center-table">
     <colgroup>
         <col width="150">
@@ -34,14 +38,14 @@ use yii\widgets\LinkPager;
         <td><?= $v['level']?></td>
         <td>
             <div class="layui-btn-group">
-                <a class="layui-btn layui-btn-sm " href="<?=\yii\helpers\Url::to(['submit/web','id'=>$v['id']])?>">审核</a>
-                <a class="layui-btn layui-btn-sm  layui-btn-normal">预览</a>
-                <button class="layui-btn layui-btn-sm layui-btn-danger">锁定</button>
+                <a class="layui-btn layui-btn-sm  ">添加子分类</a>
+                <a class="layui-btn layui-btn-sm  layui-btn-normal">修改</a>
+                <button class="layui-btn layui-btn-sm layui-btn-danger">删除</button>
             </div>
         </td>
     </tr>
     <?php endforeach;?>
-
     </tbody>
 </table>
+
 <?= LinkPager::widget(['pagination' => $pages]); ?>
