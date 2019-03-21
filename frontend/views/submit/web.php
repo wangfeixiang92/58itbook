@@ -89,18 +89,24 @@ $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]);
                 <p class="help-block"><i class="glyphicon glyphicon-volume-down"></i>提示：文件大小不得超过30M</p>
             </div>
         </div>
-
         <div class="form-group">
             <label class="col-sm-2 control-label">使用方法 </label>
             <div class="col-sm-10">
-                <textarea name="manual" id="manual" cols="30" rows="10" class="form-control" placeholder="提供插件使用方法介绍等信息(奖励2倍以上IT币) "><?=!empty($model->manual) ? $model->manual: ''?></textarea>
+                <p style="margin-top: 8px;"><i class="glyphicon glyphicon-volume-down"></i>提供插件使用方法介绍等信息(奖励2倍以上IT币)</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label"> </label>
+            <div class="col-sm-10">
+                <input type="text" name="manual" hidden>
+                <script id="manual" name="content" type="text/plain"><?=!empty($model->manual) ? $model->manual:''?></script>
             </div>
         </div>
         
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <input type="hidden" name='<?=Yii::$app->request->csrfParam?>' value="<?=Yii::$app->request->csrfToken?>"/>
-                <button type="submit" onclick="uploadFile()" class="btn btn-default btn-block black" data-toggle="modal" data-target="#sumit-process-model">提交</button>
+                <button type="submit" onclick="submitUEditor();uploadFile()" class="btn btn-default btn-block black" data-toggle="modal" data-target="#sumit-process-model">提交</button>
             </div>
         </div>
     </form>
@@ -126,8 +132,15 @@ $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]);
 <script>
 
     $(document).ready(function(){
-       var ckeditot =  CKEDITOR.replace('manual');
+        var ue = UE.getEditor('manual');
     });
+    //提交富文本
+    function submitUEditor() {
+        if (UE.getEditor('editor').hasContents()) {
+            document.setweb.manual.value = UE.getEditor('manual').getContent();
+            document.setweb.submit();
+        }
+    }
     //询问框
     function explain(label){
         if(label == 'submit') {

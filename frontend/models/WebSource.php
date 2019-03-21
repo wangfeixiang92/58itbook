@@ -48,6 +48,7 @@ class WebSource extends Model
     public $isResponseType;
     public $resources;
     public $previewUrl;
+    public $img;
 
     /**
      * @return array the validation rules.
@@ -67,7 +68,11 @@ class WebSource extends Model
                     [['oldUrl'],'url', 'defaultScheme' => 'http','message'=>'官网地址不合法','on'=> 'submit-web'],
                     [['IE'],'in', 'range' => [6,7,8,9,10, 11],'message'=>'IE版本选择不合法','on'=> 'submit-web'],
                     ['id','required', 'message' => 'id不合法','on'=> 'detail'],
-                    ['id','integer', 'message' => 'id不合法','on'=> 'detail']
+                    ['id','integer', 'message' => 'id不合法','on'=> 'detail'],
+                    ['img', 'required', 'message' => '请选择文件','on'=> 'ckeditor-img'],
+                    ['img', 'file', 'message' => '请选择文件','on'=> 'ckeditor-img'],
+                    ['img', 'validateCkeditorImg','message'=>'上传的文件不合规','on'=> 'ckeditor-img'],
+
                 ];
 
     }
@@ -87,6 +92,23 @@ class WebSource extends Model
             return true;
         }
     }
+
+    /*
+     * 验证文件
+     * */
+    public function validateCkeditorImg($attribute, $params)
+    {
+        if (!$this->hasErrors()) {
+            if(!in_array(trim($this->img->type),['image/gif','image/jpeg','image/gif','image/png']) || !in_array(trim($this->img->extension),['png','jpg','jpeg','gif'])){
+                $this->addError('error','上传的文件格式错误');
+            }
+            if($this->img->size > 5*1024*1024){
+                $this->addError('error','所上传文件的大小不得大于5M');
+            }
+            return true;
+        }
+    }
+
 
 
     public function addWebSource()
@@ -130,6 +152,32 @@ class WebSource extends Model
         } else {
             //上传失败记录日志
             Yii::info($this->errors, $this->resources, 'Upload');
+            return false;
+        }
+        return   $this->soureUrl;
+    }
+
+
+    /**
+     * 上传文件
+     * */
+    public function uploadCkeditorImg()
+    {
+        $path =Yii::$app->params['ckeditorImg'].'/'.date('ymd',time()).'/';
+        if ( !is_dir($path)) {
+            mkdir($path, 0777, true);
+            chmod($path, 0777);
+        }
+        if ($this->validate()) {
+            //生成文件名
+            $fileName =rand(100000, 999999). '.'.$this->img->extension;
+            $this->soureUrl =$path.$fileName;
+            if(!$this->img->saveAs($this->soureUrl)){
+                return false;
+            }
+        } else {
+            //上传失败记录日志
+            Yii::info($this->errors, $this->img, 'Upload');
             return false;
         }
         return   $this->soureUrl;

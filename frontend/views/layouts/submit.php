@@ -39,9 +39,10 @@ use yii\widgets\Breadcrumbs;
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://cdn.staticfile.org/layer/2.3/layer.js"></script>
-    <!-- 富文本编辑器-->
-    <script type="text/javascript" src="<?= \common\models\CommonHelper::getAssetUrl('/ckeditor/ckeditor.js') ?>"></script>
-    <script type="text/javascript" src="<?= \common\models\CommonHelper::getAssetUrl('/ckeditor/config.js') ?>"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="<?= \common\models\CommonHelper::getAssetUrl('/ueditor/ueditor.config.js') ?>"></script>
+    <script type="text/javascript" src="<?= \common\models\CommonHelper::getAssetUrl('/ueditor/ueditor.all.js') ?>"></script>
+
 </head>
 <body>
 <header id="header">

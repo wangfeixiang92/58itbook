@@ -22,6 +22,16 @@ class SubmitController extends CommonController
         }
     }
 
+    public function beforeAction($action) {
+        $currentaction = $action->id;
+        if(in_array($currentaction,['ckeditor-img'])) {
+            $action->controller->enableCsrfValidation = false;
+        }
+        parent::beforeAction($action);
+        return true;
+
+}
+
 
     /**
      * .web 发布页
@@ -70,10 +80,28 @@ class SubmitController extends CommonController
         ]);
     }
 
+    /*
+     * 富文本上传图片
+     * */
+    public function  actionCkeditorImg()
+    {
+        if (Yii::$app->request->isPost) {
+            $model = new WebSource();
+            $model->scenario = 'ckeditor-img';
+            $model->img= UploadedFile::getInstanceByName('upload');
+            $model->load(Yii::$app->request->post(), '');
+            $checkRes = $model->validate();
+            if (!$checkRes) {
+                return json_encode(['error'=> reset($model->getErrors())[0]]);
+            }
 
+            if(!$model->uploadCkeditorImg()){
+                return json_encode(['error'=> '文件上传失败']);
+            }
 
-
-
-
+            return json_encode(['url'=> $model->soureUrl]);
+        }
+        return json_encode(['error'=> '请求方式非法']);
+    }
 
 }
