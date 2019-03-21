@@ -83,7 +83,7 @@ class SubmitController extends CommonController
     /*
      * 富文本上传图片
      * */
-    public function  actionCkeditorImg()
+    public function  actionUeditorImg()
     {
         if (Yii::$app->request->isPost) {
             $model = new WebSource();

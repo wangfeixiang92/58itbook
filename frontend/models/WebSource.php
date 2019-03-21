@@ -114,6 +114,7 @@ class WebSource extends Model
     public function addWebSource()
     {
         $source = new DbWebSource();
+        $source->uId = $this->uId;
         $source->title = $this->title;
         $source->keyword = $this->keyword;
         $source->describe = $this->describe;
@@ -163,7 +164,7 @@ class WebSource extends Model
      * */
     public function uploadCkeditorImg()
     {
-        $path =Yii::$app->params['ckeditorImg'].'/'.date('ymd',time()).'/';
+        $path =Yii::$app->params['ueditorImg'].'/'.date('ymd',time()).'/';
         if ( !is_dir($path)) {
             mkdir($path, 0777, true);
             chmod($path, 0777);

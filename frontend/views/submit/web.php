@@ -98,8 +98,7 @@ $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]);
         <div class="form-group">
             <label class="col-sm-2 control-label"> </label>
             <div class="col-sm-10">
-                <input type="text" name="manual" hidden>
-                <script id="manual" name="content" type="text/plain"><?=!empty($model->manual) ? $model->manual:''?></script>
+                <script id="manual" name="manual" type="text/plain"><?=!empty($model->manual) ? $model->manual:''?></script>
             </div>
         </div>
         
@@ -134,13 +133,6 @@ $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]);
     $(document).ready(function(){
         var ue = UE.getEditor('manual');
     });
-    //提交富文本
-    function submitUEditor() {
-        if (UE.getEditor('editor').hasContents()) {
-            document.setweb.manual.value = UE.getEditor('manual').getContent();
-            document.setweb.submit();
-        }
-    }
     //询问框
     function explain(label){
         if(label == 'submit') {

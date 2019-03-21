@@ -34,5 +34,5 @@ return [
 
 
     ],
-    'ckeditorImg'=>'resources/ckeditorImg'
+    'ueditorImg'=>'resources/ueditorImg'
 ];
