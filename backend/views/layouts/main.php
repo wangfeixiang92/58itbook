@@ -19,6 +19,7 @@ use yii\widgets\Breadcrumbs;
     <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('/layui/css/layui.css') ?>">
     <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('/css/common.css') ?>">
     <script src="<?= \common\models\CommonHelper::getAssetUrl('/layui/layui.js') ?>"></script>
+    <script src="<?= \common\models\CommonHelper::getAssetUrl('/js/common.js') ?>"></script>
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
@@ -71,7 +72,7 @@ use yii\widgets\Breadcrumbs;
                     <dl class="layui-nav-child">
                         <dd><a href="<?=\yii\helpers\Url::to(['submit/list'])?>">资源管理</a></dd>
                         <dd><a href="<?=\yii\helpers\Url::to(['submit/submit'])?>">资源发布</a></dd>
-                        <dd><a href="<?=\yii\helpers\Url::to(['submit/subject'])?>">分类管理</a></dd>
+                        <dd><a href="<?=\yii\helpers\Url::to(['web-subject/list'])?>">分类管理</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item"><a href="">云市场</a></li>

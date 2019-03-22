@@ -30,4 +30,11 @@ class DbWebSubject extends \yii\db\ActiveRecord
         return 'webSubject';
     }
 
+    //获取分类名称
+    public static function getNameById($id){
+        $one =self::find()->select('name')->where(['id'=>$id])->one();
+        return $one->name;
+    }
+
+
 }

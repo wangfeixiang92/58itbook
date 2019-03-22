@@ -3,7 +3,7 @@
   <a href="">资源审核</a>
   <a><cite>ziiii</cite></a>
 </span>
-<form class="layui-form top40per" action="">
+<form class="layui-form top40per" action="<?= Yii::$app->urlManager->createUrl(['web-subject/add-child-subject'])?>" method="post">
     <div class="layui-form-item">
         <label class="layui-form-label">标题</label>
         <div class="layui-input-block">

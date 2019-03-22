@@ -3,9 +3,7 @@
 namespace backend\controllers;
 
 
-use backend\models\WebSource;
 use backend\models\WebSubject;
-use common\models\DbWebSource;
 use common\models\DbWebSubject;
 use Yii;
 use yii\data\Pagination;
@@ -14,7 +12,7 @@ use yii\web\Response;
 use yii\web\UploadedFile;
 
 
-class SubmitController extends CommonController
+class WebSubjectController extends CommonController
 {
 
     public function init()
@@ -29,32 +27,64 @@ class SubmitController extends CommonController
      * web 审核页面
      * */
     public function actionList(){
-        $total =  DbWebSource::find()->where(['status'=>0,'isDelete'=>0])->count();
-        $page = new Pagination(['totalCount' => $total,'pageSize'=>30]);
-        $list = DbWebSource::find()
-            ->where(['status'=>0,'isDelete'=>0])
-            ->offset($page->offset)
-            ->limit($page->limit)
+        $map['isDelete']=0;
+        $pid = Yii::$app->request->get('pid');
+        $id =  Yii::$app->request->get('id');
+        $pid &&  $map['pid'] = $pid;
+        $id &&  $map['id'] = $id;
+        $pInfo=[];
+        if($pid){
+            $pInfo = DbWebSubject::findOne(['id'=>$pid]);
+        }
+        $this->page->current=Yii::$app->request->get('page') ? Yii::$app->request->get('page') :1;
+        $this->page->total =  DbWebSubject::find()->where($map)->count();
+        $list = DbWebSubject::find()
+            ->where($map)
+            ->offset(($this->page->current-1)*$this->page->length)
+            ->limit($this->page->length)
             ->asArray()
             ->all();
-        return $this->render('list',['list'=>$list,'pages'=>$page]);
+        foreach ($list as &$v ){
+            $v['pname'] = $v['pid'] == 0 ? '':DbWebSubject::getNameById($v['pid']);
+        }
+        return $this->render('list',['list'=>$list,'page'=>$this->page,'info'=>$pInfo]);
     }
+
 
     /*
-   * 科目
-   * */
-    public function actionSubject(){
-        $total =  DbWebSubject::find()->where(['isDelete'=>0])->count();
-        $page = new Pagination(['totalCount' => $total,'pageSize'=>30]);
-        $list = DbWebSubject::find()
-            ->where(['isDelete'=>0])
-            ->offset($page->offset)
-            ->limit($page->limit)
-            ->asArray()
-            ->all();
-        return $this->render('subject',['list'=>$list,'pages'=>$page]);
+     * 添加子分类
+     * */
+    public function actionAddChildSubject(){
+        $model = new WebSubject();
+        $agreement = Yii::$app->params['web-agreement'];
+        $id= Yii::$app->request->get('id');
+        $pInfo = DbWebSubject::findOne(['id'=>$id]);
+        if(Yii::$app->request->isPost) {
+            $model->scenario = 'addChild';
+            $model->load(Yii::$app->request->post(), '');
+            $checkRes = $model->validate();
+            if (!$checkRes) {
+                return $this->render('child', [
+                    'info'=>$pInfo,
+                    'model'=>$model,
+                    'error' => reset($model->getErrors())[0],
+                ]);
+            }
+            $result = $model->addSubject();
+            if(!$result){
+                return $this->render('child', [
+                    'info'=>$pInfo,
+                    'model'=>$model,
+                    'error' => reset($model->getErrors())[0],
+                ]);
+            }
+        }
+        return $this->render('child', [
+            'info'=>$pInfo,
+            'model'=>$model,
+            'error' => reset($model->getErrors())[0],
+        ]);
     }
-
 
 
     /**
