@@ -1,9 +1,10 @@
 <span class="layui-breadcrumb" >
-  <a href="">首页</a>
-  <a href="">资源审核</a>
-  <a><cite>ziiii</cite></a>
+    <a href="<?= Yii::$app->urlManager->createUrl(['submit/list']) ?>">网站模板</a>
+    <a href="<?= Yii::$app->urlManager->createUrl(['submit/list']) ?>">资源管理</a>
+    <a href="javascript:void(0)">审核</a>
+    <a><cite><?= $info['title']?></cite></a>
 </span>
-<form class="layui-form top40per" action="<?= Yii::$app->urlManager->createUrl(['web-subject/add-child-subject'])?>" method="post">
+<form class="layui-form top40per" action="<?= Yii::$app->urlManager->createUrl(['submit/web'])?>" method="post">
     <div class="layui-form-item">
         <label class="layui-form-label">标题</label>
         <div class="layui-input-block">
@@ -22,21 +23,40 @@
             <input type="text" name="describe" required  lay-verify="required" placeholder="请输入简介" autocomplete="off" class="layui-input" value="<?= $info['describe']?>">
         </div>
     </div>
+
     <div class="layui-form-item">
-        <div class=" layui-col-md3">
-            <label class="layui-form-label">选择框</label>
-            <div class="layui-input-block">
-                <select name="city" lay-verify="required">
-                    <option value=""></option>
-                    <option value="0">北京</option>
-                    <option value="1">上海</option>
-                    <option value="2">广州</option>
-                    <option value="3">深圳</option>
-                    <option value="4">杭州</option>
-                </select>
-            </div>
+        <label class="layui-form-label">一级分类</label>
+        <div class="layui-input-block">
+            <?php foreach ($subjectList as $v):?>
+                <?php if($v['level'] == 0):?>
+                <input type="checkbox" name="subject[0][]" pid="<?= $v['pid']?>" title="<?= $v['name']?>" lay-skin="primary" onclick="selectSubject(this)" >
+                <?php endif;?>
+            <?php endforeach;?>
         </div>
-        <div class=" layui-col-md3">
+    </div>
+    <div class="layui-form-item" style="display: none">
+        <label class="layui-form-label">二级分类</label>
+        <div class="layui-input-block">
+            <?php foreach ($subjectList as $v):?>
+                <?php if($v['level'] == 1):?>
+                    <input type="checkbox" name="subject[1][]" pid="<?= $v['pid']?>" title="<?= $v['name']?>" lay-skin="primary" >
+                <?php endif;?>
+            <?php endforeach;?>
+        </div>
+    </div>
+    <div class="layui-form-item" style="display: none">
+        <label class="layui-form-label">三级分类</label>
+        <div class="layui-input-block">
+            <?php foreach ($subjectList as $v):?>
+                <?php if($v['level'] == 2):?>
+                    <input type="checkbox" name="subject[2][]" pid="<?= $v['pid']?>" title="<?= $v['name']?>" lay-skin="primary" >
+                <?php endif;?>
+            <?php endforeach;?>
+        </div>
+    </div>
+
+
+        <div class=" layui-col-md3" style="">
             <label class="layui-form-label">选择框</label>
             <div class="layui-input-block">
                 <select name="city" lay-verify="required">

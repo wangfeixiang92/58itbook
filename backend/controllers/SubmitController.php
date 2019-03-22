@@ -40,20 +40,6 @@ class SubmitController extends CommonController
         return $this->render('list',['list'=>$list,'pages'=>$page]);
     }
 
-    /*
-   * 科目
-   * */
-    public function actionSubject(){
-        $total =  DbWebSubject::find()->where(['isDelete'=>0])->count();
-        $page = new Pagination(['totalCount' => $total,'pageSize'=>30]);
-        $list = DbWebSubject::find()
-            ->where(['isDelete'=>0])
-            ->offset($page->offset)
-            ->limit($page->limit)
-            ->asArray()
-            ->all();
-        return $this->render('subject',['list'=>$list,'pages'=>$page]);
-    }
 
 
 
@@ -67,17 +53,8 @@ class SubmitController extends CommonController
         $agreement = Yii::$app->params['web-agreement'];
         $model->scenario = 'edit';
         $id= Yii::$app->request->get('id');
-        $model->id=$id;
-        $checkRes = $model->validate();
-        if (!$checkRes) {
-            return $this->render('web', [
-                'error' => reset($model->getErrors())[0],
-                'model' => $model,
-                'agreement'=>$agreement
-            ]);
-        }
-
         $info = DbWebSource::find()->where(['id'=>$id])->asArray()->one();
+        $subjectList = DbWebSubject::find()->where(['isDelete'=>0,'level'=>0])->asArray()->all();
         if(Yii::$app->request->isPost) {
             $model->scenario = 'submit-web';
             $model->resources= UploadedFile::getInstanceByName('resources');
@@ -114,7 +91,8 @@ class SubmitController extends CommonController
         return $this->render('web', [
             'model' => $model,
             'agreement'=>$agreement,
-            'info'=>$info
+            'info'=>$info,
+            'subjectList'=>$subjectList
         ]);
     }
 
