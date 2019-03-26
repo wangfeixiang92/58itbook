@@ -20,6 +20,7 @@ use yii\widgets\Breadcrumbs;
     <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('/css/common.css') ?>">
     <script src="<?= \common\models\CommonHelper::getAssetUrl('/layui/layui.js') ?>"></script>
     <script src="<?= \common\models\CommonHelper::getAssetUrl('/js/common.js') ?>"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">

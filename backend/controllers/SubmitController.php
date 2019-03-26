@@ -54,7 +54,7 @@ class SubmitController extends CommonController
         $model->scenario = 'edit';
         $id= Yii::$app->request->get('id');
         $info = DbWebSource::find()->where(['id'=>$id])->asArray()->one();
-        $subjectList = DbWebSubject::find()->where(['isDelete'=>0,'level'=>0])->asArray()->all();
+        $subjectList = DbWebSubject::find()->where(['isDelete'=>0])->asArray()->all();
         if(Yii::$app->request->isPost) {
             $model->scenario = 'submit-web';
             $model->resources= UploadedFile::getInstanceByName('resources');
@@ -64,16 +64,14 @@ class SubmitController extends CommonController
             if (!$checkRes) {
                 return $this->render('web', [
                     'error' => reset($model->getErrors())[0],
-                    'model' => $model,
-                    'agreement'=>$agreement,
+                    'model' => $model
                 ]);
             }
 
             if(!$model->upload()){
                 return $this->render('web', [
                     'error' =>'文件上传失败',
-                    'model' => $model,
-                    'agreement'=>$agreement
+                    'model' => $model
                 ]);
             }
 
@@ -81,16 +79,13 @@ class SubmitController extends CommonController
             if(!$result){
                 return $this->render('web', [
                     'error' =>'发布失败',
-                    'model' => $model,
-                    'agreement'=>$agreement
+                    'model' => $model
                 ]);
             }
             return $this->redirect('submitweb.html');
         }
-
         return $this->render('web', [
             'model' => $model,
-            'agreement'=>$agreement,
             'info'=>$info,
             'subjectList'=>$subjectList
         ]);

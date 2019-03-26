@@ -24,32 +24,28 @@
         </div>
     </div>
 
-    <div class="layui-form-item">
+    <div class="layui-form-item firstSubjectList">
         <label class="layui-form-label">一级分类</label>
         <div class="layui-input-block">
             <?php foreach ($subjectList as $v):?>
                 <?php if($v['level'] == 0):?>
-                <input type="checkbox" name="subject[0][]" pid="<?= $v['pid']?>" title="<?= $v['name']?>" lay-skin="primary" onclick="selectSubject(this)" >
+                <input type="checkbox"  lay-filter="firstLevel" name="subject[0][]" pid="<?= $v['pid']?>" value="<?= $v['id'];?>" title="<?= $v['name']?>" lay-skin="primary" >
                 <?php endif;?>
             <?php endforeach;?>
         </div>
     </div>
-    <div class="layui-form-item" style="display: none">
-        <label class="layui-form-label">二级分类</label>
-        <div class="layui-input-block">
-            <?php foreach ($subjectList as $v):?>
-                <?php if($v['level'] == 1):?>
-                    <input type="checkbox" name="subject[1][]" pid="<?= $v['pid']?>" title="<?= $v['name']?>" lay-skin="primary" >
-                <?php endif;?>
-            <?php endforeach;?>
-        </div>
+       <div class="layui-form-item twoSubjectList" style="display: none">
+           <label class="layui-form-label">二级分类</label>
+           <div class="layui-input-block">
+
+           </div>
     </div>
-    <div class="layui-form-item" style="display: none">
+    <div class="layui-form-item threeSubjectList" style="display: none">
         <label class="layui-form-label">三级分类</label>
         <div class="layui-input-block">
             <?php foreach ($subjectList as $v):?>
                 <?php if($v['level'] == 2):?>
-                    <input type="checkbox" name="subject[2][]" pid="<?= $v['pid']?>" title="<?= $v['name']?>" lay-skin="primary" >
+                    <input type="checkbox"  lay-filter="threeLevel" name="subject[2][]" pid="<?= $v['pid']?>"  value="<?= $v['id'];?>" title="<?= $v['name']?>" lay-skin="primary" >
                 <?php endif;?>
             <?php endforeach;?>
         </div>
@@ -146,11 +142,53 @@
     //Demo
     layui.use('form', function(){
         var form = layui.form;
-
-        //监听提交
-        form.on('submit(formDemo)', function(data){
-            layer.msg(JSON.stringify(data.field));
-            return false;
+        form.on('checkbox(firstLevel)', function(data){
+            var html='';
+            if( $('.firstSubjectList').find('input[type="checkbox"]:checked').length == 0 ){
+                    $('.twoSubjectList').hide();
+                }else{
+                    $('.twoSubjectList').show();
+                }
+            $('input[type="checkbox"]:checked').each(function () {
+                    var id=$(this).val();
+                    <?php foreach ($subjectList as $v):?>
+                    <?php if($v['level'] == 1 ):?>
+                            if(<?= $v['pid'];?> == id){
+                                html += '<input type="checkbox"  lay-filter="twoLevel" name="subject[1][]" pid="<?= $v['pid']?>" value="<?= $v['id'];?>"  title="<?= $v['name']?>" lay-skin="primary">';
+                            }
+                    <?php endif;?>
+                    <?php endforeach;?>
+            });
+            html += '   </div>\n' +
+                '</div>';
+            $('.twoSubjectList').find('.layui-input-block').empty().append(html);
+            layui.form.render();
         });
+
+        form.on('checkbox(twoLevel)', function(data){
+            var html='';
+            if(   $('.twoSubjectList').find('input[type="checkbox"]:checked').length == 0 ){
+                $('.threeSubjectList').hide();
+            }else{
+                $('.threeSubjectList').show();
+            }
+            $('input[type="checkbox"]:checked').each(function () {
+                var id=$(this).val();
+                <?php foreach ($subjectList as $v):?>
+                <?php if($v['level'] == 2):?>
+                    if(<?= $v['pid'];?> == id){
+                        html +=   '<input type="checkbox"  lay-filter="threeLevel" name="subject[2][]" pid="<?= $v['pid']?>"  value="<?= $v['id'];?>" title="<?= $v['name']?>" lay-skin="primary" >';
+                    }
+                <?php endif;?>
+                <?php endforeach;?>
+            });
+            html += '</div>\n' +
+                '</div>';
+            $('.threeSubjectList').find('.layui-input-block').empty().append(html);
+            layui.form.render();
+        });
+
     });
+
+
 </script>
