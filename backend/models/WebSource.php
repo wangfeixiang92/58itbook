@@ -161,30 +161,6 @@ class WebSource extends Model
     }
 
 
-    /**
-     * 上传文件
-     * */
-    public function uploadCkeditorImg()
-    {
-        $path =Yii::$app->params['ueditorImg'].'/'.date('ymd',time()).'/';
-        if ( !is_dir($path)) {
-            mkdir($path, 0777, true);
-            chmod($path, 0777);
-        }
-        if ($this->validate()) {
-            //生成文件名
-            $fileName =rand(100000, 999999). '.'.$this->img->extension;
-            $this->soureUrl =$path.$fileName;
-            if(!$this->img->saveAs($this->soureUrl)){
-                return false;
-            }
-        } else {
-            //上传失败记录日志
-            Yii::info($this->errors, $this->img, 'Upload');
-            return false;
-        }
-        return   $this->soureUrl;
-    }
 
 
 

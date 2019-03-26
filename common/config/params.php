@@ -1,5 +1,11 @@
 <?php
 return [
+    'domain'=>[
+        'www'=>'http://www.58itbook.com',
+        'amin'=>'http://admin.58itbook.com',
+        'pic'=>'http://pic.58itbook.com',
+        'demo'=>'http://demo.58itbook.com',
+    ],
     'emailConfig'=>[
         'adminEmail'=>'2120371570@qq.com',
         'adminName'=>'Tbook官方',
@@ -8,11 +14,6 @@ return [
         'expire'=>600,
         'ipLimit'=>10,
         'emailLimit'=>10
-    ],
-    'upload'=>[
-        'web'=>'resources/web',
-        'code'=>'resources/code',
-        'webPrewiew'=>'resources/preview/'
     ],
     'redisUserinfoKey'=>'userInfo',
     'web-agreement'=>[
@@ -34,5 +35,4 @@ return [
 
 
     ],
-    'ueditorImg'=>'resources/ueditorImg'
 ];

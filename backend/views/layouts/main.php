@@ -21,6 +21,9 @@ use yii\widgets\Breadcrumbs;
     <script src="<?= \common\models\CommonHelper::getAssetUrl('/layui/layui.js') ?>"></script>
     <script src="<?= \common\models\CommonHelper::getAssetUrl('/js/common.js') ?>"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="<?= \common\models\CommonHelper::getAssetUrl('/ueditor/ueditor.config.js') ?>"></script>
+    <script type="text/javascript" src="<?= \common\models\CommonHelper::getAssetUrl('/ueditor/ueditor.all.js') ?>"></script>
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">

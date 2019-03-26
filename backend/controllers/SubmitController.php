@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 
+use backend\models\Upload;
 use backend\models\WebSource;
 use backend\models\WebSubject;
 use common\models\DbWebSource;
@@ -92,25 +93,47 @@ class SubmitController extends CommonController
     }
 
     /*
-     * 富文本上传图片
+     * 上传图片
      * */
-    public function  actionUeditorImg()
+    public function  actionUpload()
     {
+
         if (Yii::$app->request->isPost) {
-            $model = new WebSource();
-            $model->scenario = 'ckeditor-img';
-            $model->img= UploadedFile::getInstanceByName('upload');
+            $model = new Upload();
+            $model->img= UploadedFile::getInstanceByName('file');
             $model->load(Yii::$app->request->post(), '');
             $checkRes = $model->validate();
             if (!$checkRes) {
                 return json_encode(['error'=> reset($model->getErrors())[0]]);
             }
-
-            if(!$model->uploadCkeditorImg()){
+            $url = $model->uploadImg();
+            if(!$url){
                 return json_encode(['error'=> '文件上传失败']);
             }
+            return json_encode(['url'=> $url]);
+        }
+        return json_encode(['error'=> '请求方式非法']);
+    }
 
-            return json_encode(['url'=> $model->soureUrl]);
+    /*
+ * 上传文件
+ * */
+    public function  actionUploadResource()
+    {
+
+        if (Yii::$app->request->isPost) {
+            $model = new Upload();
+            $model->resources= UploadedFile::getInstanceByName('file');
+            $model->load(Yii::$app->request->post(), '');
+            $checkRes = $model->validate();
+            if (!$checkRes) {
+                return json_encode(['error'=> reset($model->getErrors())[0]]);
+            }
+            $url = $model->uploadResource();
+            if(!$url){
+                return json_encode(['error'=> '文件上传失败']);
+            }
+            return json_encode(['url'=> $url]);
         }
         return json_encode(['error'=> '请求方式非法']);
     }
