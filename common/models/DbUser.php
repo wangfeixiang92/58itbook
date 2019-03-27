@@ -43,4 +43,13 @@ class DbUser extends \yii\db\ActiveRecord
         return 'user';
     }
 
+
+    /*
+     * 获取系统用户
+     * */
+    public static  function getSystemUid(){
+        $all = self::find()->select('uid')->where(['isSystem'=>1])->asArray()->all();
+        return $all[array_rand($all,1)]['uid'];
+    }
+
 }

@@ -5,7 +5,9 @@
  * */
 namespace backend\models;
 
+use common\models\DbUser;
 use common\models\DbWebSource;
+use frontend\models\EveryDayData;
 use Yii;
 use yii\base\Model;
 /**
@@ -23,7 +25,7 @@ class WebSource extends Model
     public $keyword;
     public $describe;
     public $manual;
-    public $subjectId;
+    public $subject;
     public $oldUrl;
     public $coverUrl;
     public $soureUrl;
@@ -39,13 +41,10 @@ class WebSource extends Model
     public $status;
     public $isDelete;
     public $IE;
-    public $isBoutique;
-    public $isIndex;
     public $isIE;
     public $isFirefox;
     public $isChrome;
     public $isSafari;
-    public $isResponseType;
     public $resources;
     public $previewUrl;
     public $img;
@@ -56,25 +55,27 @@ class WebSource extends Model
     public function rules()
     {
                 return [
-                    ['resources', 'required', 'message' => '请选择文件','on'=> 'submit-web'],
-                    ['resources', 'required', 'message' => '请选择文件','on'=> 'submit-web'],
-                    [['manual','oldUrl'],'string','on'=> 'submit-web'],
-                    ['resources', 'required', 'message' => '请选择文件','on'=> 'submit-web'],
-                    ['resources', 'file', 'message' => '请选择文件','on'=> 'submit-web'],
-                    ['resources', 'validateResources','message'=>'上传的文件不合规','on'=> 'submit-web'],
+//                    ['resources', 'required', 'message' => '请选择文件','on'=> 'submit-web'],
+//                    ['resources', 'required', 'message' => '请选择文件','on'=> 'submit-web'],
+                    [['manual','oldUrl','coverUrl','soureUrl','resources'],'string','on'=> 'submit-web'],
+                    [['subject'],'required','on'=> 'submit-web'],
+                     //['resources', 'required', 'message' => '请选择文件','on'=> 'submit-web'],
+//                    ['resources', 'file', 'message' => '请选择文件','on'=> 'submit-web'],
+//                    ['resources', 'validateResources','message'=>'上传的文件不合规','on'=> 'submit-web'],
                     [['title'], 'string', 'min' => 5, 'max' => 255,'message' => '标题长度必须大于5个字符','on'=> 'submit-web'],
                     [['keyword'],'string', 'min' => 2,'max' => 255,'message' => '标签长度必须大于2个字符','on'=> 'submit-web'],
                     [['describe'],'string','max' => 255,'message' => '简介长度不能超过255个字符','on'=> 'submit-web'],
                     [['price'],'integer','max'=>1000,'message'=>'价格不能大于1000','on'=> 'submit-web'],
+                    [[ 'browseNum','collectionNum','likeNum','shareNum','commentNum','downloadNum'],'integer','message'=>'收藏，点赞，评论等数值必须为整数','on'=> 'submit-web'],
+                    [[ 'browseNum','collectionNum','likeNum','shareNum','commentNum','downloadNum'],'default','value' =>0,'on'=> 'submit-web'],
+                    [[ 'isIE','isFirefox','isChrome','isSafari'],'default','value' =>1,'on'=> 'submit-web'],
                     [['price'],'default', 'value' =>0,'on'=> 'submit-web'],
-                    [['oldUrl'],'url', 'defaultScheme' => 'http','message'=>'官网地址不合法','on'=> 'submit-web'],
+                    //[['oldUrl'],'url', 'defaultScheme' => 'http','message'=>'官网地址不合法','on'=> 'submit-web'],
                     [['IE'],'in', 'range' => [6,7,8,9,10, 11],'message'=>'IE版本选择不合法','on'=> 'submit-web'],
-                    ['id','required', 'message' => 'id不合法','on'=> ['detail','edit']],
-                    ['id','integer', 'message' => 'id不合法','on'=> ['detail','edit']],
-                    ['img', 'required', 'message' => '请选择文件','on'=> 'ckeditor-img'],
-                    ['img', 'file', 'message' => '请选择文件','on'=> 'ckeditor-img'],
-                    ['img', 'validateCkeditorImg','message'=>'上传的文件不合规','on'=> 'ckeditor-img'],
-
+                    ['id','integer', 'message' => 'id不合法'],
+//                    ['img', 'required', 'message' => '请选择文件','on'=> 'ckeditor-img'],
+//                    ['img', 'file', 'message' => '请选择文件','on'=> 'ckeditor-img'],
+//                    ['img', 'validateCkeditorImg','message'=>'上传的文件不合规','on'=> 'ckeditor-img'],
                 ];
 
     }
@@ -115,50 +116,43 @@ class WebSource extends Model
 
     public function addWebSource()
     {
-        $source = new DbWebSource();
-        $source->uId = $this->uId;
+        $source = DbWebSource::findOne(['id'=>$this->id]);
+        $source->uId = DbUser::getSystemUid();
         $source->title = $this->title;
         $source->keyword = $this->keyword;
         $source->describe = $this->describe;
         $source->manual = $this->manual;
         $source->oldUrl = $this->oldUrl;
-        $source->soureUrl=$this->soureUrl;
-        $source->previewUrl=Yii::$app->params['upload']['webPrewiew'].basename($this->soureUrl);
+        $source->coverUrl=$this->coverUrl;
+        $source->soureUrl=$this->resources;
+        $source->previewUrl=Yii::$app->params['upload']['web']['webPrewiew'].basename($this->soureUrl);
+        $source->browseNum = $this->browseNum;
+        $source->collectionNum = $this->collectionNum;
+        $source->likeNum = $this->likeNum;
+        $source->shareNum = $this->shareNum;
+        $source->commentNum = $this->commentNum;
+        $source->downloadNum = $this->downloadNum;
+        $source->IE = $this->IE;
+        $source->isIE = $this->isIE;
+        $source->isFirefox = $this->isFirefox;
+        $source->isChrome = $this->isChrome;
+        $source->isSafari = $this->isSafari;
         $source->updateTime = time();
-        $source->registerTime = date('Y-m-d H:i:s',time());
         $source->price = $this->price;
+        $transaction = Yii::$app->db->beginTransaction();
         $result = $source->save();
-        if($result){
-            (new EveryDayData())->addSubmitWebNum();
-        }
-        return $result;
-    }
-
-
-    /**
-     * 上传文件
-     * */
-    public function upload()
-    {
-          $path =Yii::$app->params['upload']['web'].'/'.date('ymd',time()).'/';
-        if ( !is_dir($path)) {
-             mkdir($path, 0777, true);
-            chmod($path, 0777);
-        }
-        if ($this->validate()) {
-            //生成文件名
-            $fileName =rand(100000, 999999). '.'.$this->resources->extension;
-            $this->soureUrl =$path.$fileName;
-            if(!$this->resources->saveAs($this->soureUrl)){
-                return false;
-            }
-        } else {
-            //上传失败记录日志
-            Yii::info($this->errors, $this->resources, 'Upload');
+        $r1 = (new WebSubRelation)->bindSubjectIds($this->id,$this->subject);
+        $r2 =(new EveryDayData())->addNewWebNum();
+        if($result && $r1 && $r2){
+            $transaction->commit();
+            return true;
+        }else{
+            $transaction->rollBack();
             return false;
         }
-        return   $this->soureUrl;
     }
+
+
 
 
 

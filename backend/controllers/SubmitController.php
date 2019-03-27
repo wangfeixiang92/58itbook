@@ -51,39 +51,38 @@ class SubmitController extends CommonController
     public function actionWeb()
     {
         $model = new WebSource();
-        $agreement = Yii::$app->params['web-agreement'];
-        $model->scenario = 'edit';
-        $id= Yii::$app->request->get('id');
+        $model->scenario = 'submit-web';
+        $id= Yii::$app->request->getQueryParam('id');
+        $model->id=$id;
         $info = DbWebSource::find()->where(['id'=>$id])->asArray()->one();
         $subjectList = DbWebSubject::find()->where(['isDelete'=>0])->asArray()->all();
         if(Yii::$app->request->isPost) {
-            $model->scenario = 'submit-web';
-            $model->resources= UploadedFile::getInstanceByName('resources');
             $model->uId=$this->uId;
             $model->load(Yii::$app->request->post(), '');
             $checkRes = $model->validate();
             if (!$checkRes) {
                 return $this->render('web', [
                     'error' => reset($model->getErrors())[0],
-                    'model' => $model
+                    'info'=>$info,
+                    'model' => $model,
+                    'subjectList'=>$subjectList
                 ]);
             }
-
-            if(!$model->upload()){
-                return $this->render('web', [
-                    'error' =>'文件上传失败',
-                    'model' => $model
-                ]);
-            }
-
             $result = $model->addWebSource();
             if(!$result){
                 return $this->render('web', [
                     'error' =>'发布失败',
-                    'model' => $model
+                    'info'=>$info,
+                    'model' => $model,
+                    'subjectList'=>$subjectList
                 ]);
             }
-            return $this->redirect('submitweb.html');
+            return $this->render('web', [
+                    'success' => '发布成功',
+                    'info'=>$info,
+                    'model' => $model,
+                    'subjectList'=>$subjectList
+                ]);
         }
         return $this->render('web', [
             'model' => $model,

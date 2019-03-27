@@ -5,22 +5,32 @@
     <a><cite><?= $info['title']?></cite></a>
 </span>
 <form class="layui-form top40per" action="<?= Yii::$app->urlManager->createUrl(['submit/web','id'=>$info['id']])?>" method="post" enctype="multipart/form-data">
+    <?php if(isset($error)):?>
+    <div class="layui-form-item">
+        <div class="layui-input-block center"><span class="layui-badge">错误：<?=$error?></span></div>
+    </div>
+    <?php endif;?>
+    <?php if(isset($success)):?>
+        <div class="layui-form-item">
+            <div class="layui-input-block center"><span class="layui-badge layui-bg-green"><?=$success?></span></div>
+        </div>
+    <?php endif;?>
     <div class="layui-form-item">
         <label class="layui-form-label">标题</label>
         <div class="layui-input-block">
-            <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" value="<?= $info['title']?>">
+            <input type="text" name="title"   placeholder="请输入标题" autocomplete="off" class="layui-input" value="<?= $info['title']?>">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">关键字</label>
         <div class="layui-input-block">
-            <input type="text" name="keyword" required  lay-verify="required" placeholder="请输入关键字" autocomplete="off" class="layui-input" value="<?= $info['keyword']?>">
+            <input type="text" name="keyword"   placeholder="请输入关键字" autocomplete="off" class="layui-input" value="<?= $info['keyword']?>">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">简介</label>
         <div class="layui-input-block">
-            <input type="text" name="describe" required  lay-verify="required" placeholder="请输入简介" autocomplete="off" class="layui-input" value="<?= $info['describe']?>">
+            <input type="text" name="describe"   placeholder="请输入简介" autocomplete="off" class="layui-input" value="<?= $info['describe']?>">
         </div>
     </div>
 
@@ -53,15 +63,15 @@
     <div class="layui-form-item">
         <label class="layui-form-label">官网地址</label>
         <div class="layui-input-block">
-            <input type="text" name="oldUrl" required  lay-verify="required" placeholder="请输入官网地址" autocomplete="off" class="layui-input" value="<?= $info['oldUrl']?>">
+            <input type="text" name="oldUrl"   placeholder="请输入官网地址" autocomplete="off" class="layui-input" value="<?= $info['oldUrl']?>">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">预览图</label>
-        <button type="button" class="layui-btn" id="previewUrl">
+        <button type="button" class="layui-btn" id="coverUrl">
             <i class="layui-icon">&#xe67c;</i>上传预览图
         </button>
-        <input type="text" name="previewUrl" hidden>
+        <input type="text" name="coverUrl" hidden>
     </div>
     <div class="layui-form-item previewImg" style="display: none">
         <label class="layui-form-label">预览图</label>
@@ -81,7 +91,7 @@
     <div class="layui-form-item">
         <label class="layui-form-label">价格</label>
         <div class="layui-input-block">
-            <input type="text" name="price" required  lay-verify="required" placeholder="请输入价格" autocomplete="off" class="layui-input" value="<?= $info['price']?>">
+            <input type="text" name="price"   placeholder="请输入价格" autocomplete="off" class="layui-input" value="<?= $info['price']?>">
         </div>
     </div>
     <div class="layui-form-item layui-form-text">
@@ -93,37 +103,37 @@
     <div class="layui-form-item">
         <label class="layui-form-label">收藏数</label>
         <div class="layui-input-block">
-            <input type="text" name="collectionNum" required  lay-verify="required" placeholder="请输入收藏数" autocomplete="off" class="layui-input" value="<?= $info['collectionNum']?>">
+            <input type="text" name="collectionNum"   placeholder="请输入收藏数" autocomplete="off" class="layui-input" value="<?= $info['collectionNum']?>">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">点赞数</label>
         <div class="layui-input-block">
-            <input type="text" name="likeNum" required  lay-verify="required" placeholder="请输入点赞数" autocomplete="off" class="layui-input" value="<?= $info['likeNum']?>">
+            <input type="text" name="likeNum"   placeholder="请输入点赞数" autocomplete="off" class="layui-input" value="<?= $info['likeNum']?>">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">分享数</label>
         <div class="layui-input-block">
-            <input type="text" name="shareNum" required  lay-verify="required" placeholder="请输入分享数" autocomplete="off" class="layui-input" value="<?= $info['shareNum']?>">
+            <input type="text" name="shareNum"   placeholder="请输入分享数" autocomplete="off" class="layui-input" value="<?= $info['shareNum']?>">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">评论数</label>
         <div class="layui-input-block">
-            <input type="text" name="commentNum" required  lay-verify="required" placeholder="请输入评论数" autocomplete="off" class="layui-input" value="<?= $info['commentNum']?>">
+            <input type="text" name="commentNum"   placeholder="请输入评论数" autocomplete="off" class="layui-input" value="<?= $info['commentNum']?>">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">下载数</label>
         <div class="layui-input-block">
-            <input type="text" name="downloadNum" required  lay-verify="required" placeholder="请输入下载数" autocomplete="off" class="layui-input" value="<?= $info['downloadNum']?>">
+            <input type="text" name="downloadNum"   placeholder="请输入下载数" autocomplete="off" class="layui-input" value="<?= $info['downloadNum']?>">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">IE兼容</label>
         <div class="layui-input-block">
-            <select name="IE" lay-verify="required">
+            <select name="IE">
                 <option value="8" <?=$info['IE']== 8 ? 'selected' : '' ?>>8</option>
                 <option value="6" <?=$info['IE']== 6 ? 'selected' : '' ?>>6</option>
                 <option value="7" <?=$info['IE']== 7 ? 'selected' : '' ?>>7</option>
@@ -136,7 +146,7 @@
     <div class="layui-form-item">
         <label class="layui-form-label">IE是否兼容</label>
         <div class="layui-input-block">
-            <select name="isIE" lay-verify="required">
+            <select name="isIE">
                 <option value="1" <?=$info['isIE']== 1 ? 'selected' : '' ?>>是</option>
                 <option value="0" <?=$info['isIE']== 0 ? 'selected' : '' ?>>否</option>
             </select>
@@ -145,7 +155,7 @@
     <div class="layui-form-item">
         <label class="layui-form-label">火狐兼容</label>
         <div class="layui-input-block">
-            <select name="isFirefox" lay-verify="required">
+            <select name="isFirefox">
                 <option value="1" <?=$info['isFirefox']== 1 ? 'selected' : '' ?>>是</option>
                 <option value="0" <?=$info['isFirefox']== 0 ? 'selected' : '' ?>>否</option>
             </select>
@@ -155,7 +165,7 @@
     <div class="layui-form-item">
         <label class="layui-form-label">谷歌兼容</label>
         <div class="layui-input-block">
-            <select name="isChrome" lay-verify="required">
+            <select name="isChrome">
                 <option value="1" <?=$info['isChrome']== 1 ? 'selected' : '' ?>>是</option>
                 <option value="0" <?=$info['isChrome']== 0 ? 'selected' : '' ?>>否</option>
             </select>
@@ -165,7 +175,7 @@
     <div class="layui-form-item">
         <label class="layui-form-label">Safari兼容</label>
         <div class="layui-input-block">
-            <select name="isSafari" lay-verify="required">
+            <select name="isSafari">
                 <option value="1" <?=$info['isSafari']== 1 ? 'selected' : '' ?>>是</option>
                 <option value="0" <?=$info['isSafari']== 0 ? 'selected' : '' ?>>否</option>
             </select>
@@ -241,7 +251,7 @@
         var upload = layui.upload;
         //执行实例
         var uploadInst = upload.render({
-            elem: '#previewUrl' //绑定元素
+            elem: '#coverUrl' //绑定元素
             ,url: "<?= Yii::$app->urlManager->createUrl(['submit/upload'])?>" //上传接口
             ,data: {
                 'scenario':'img',
@@ -253,7 +263,7 @@
                     alert(res.error);
                     return false;
                 }
-                $('input[name="previewUrl"]').val(res.url);
+                $('input[name="coverUrl"]').val(res.url);
                 $('.previewImg').show();
                 $('.previewImg').find('img').attr('src',"<?= Yii::$app->params['domain']['pic']?>"+res.url);
             }
