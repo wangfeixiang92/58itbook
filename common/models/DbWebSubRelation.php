@@ -17,10 +17,6 @@ use yii\base\Model;
 
 class DbWebSubRelation extends \yii\db\ActiveRecord
 {
-    public $subId;
-    public $webId;
-    public $level;
-
     public static function getDb()
     {
         return Yii::$app->db;

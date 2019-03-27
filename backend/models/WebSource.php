@@ -40,11 +40,11 @@ class WebSource extends Model
     public $updateTime;
     public $status;
     public $isDelete;
-    public $IE;
-    public $isIE;
-    public $isFirefox;
-    public $isChrome;
-    public $isSafari;
+    public $IE=8;
+    public $isIE=1;
+    public $isFirefox=1;
+    public $isChrome=1;
+    public $isSafari=1;
     public $resources;
     public $previewUrl;
     public $img;
@@ -125,7 +125,7 @@ class WebSource extends Model
         $source->oldUrl = $this->oldUrl;
         $source->coverUrl=$this->coverUrl;
         $source->soureUrl=$this->resources;
-        $source->previewUrl=Yii::$app->params['upload']['web']['webPrewiew'].basename($this->soureUrl);
+        $source->previewUrl= str_ireplace('resource','preview',$this->soureUrl);
         $source->browseNum = $this->browseNum;
         $source->collectionNum = $this->collectionNum;
         $source->likeNum = $this->likeNum;
@@ -139,6 +139,7 @@ class WebSource extends Model
         $source->isSafari = $this->isSafari;
         $source->updateTime = time();
         $source->price = $this->price;
+        $source->status=1;
         $transaction = Yii::$app->db->beginTransaction();
         $result = $source->save();
         $r1 = (new WebSubRelation)->bindSubjectIds($this->id,$this->subject);

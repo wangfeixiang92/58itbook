@@ -39,23 +39,27 @@
         <div class="layui-input-block">
             <?php foreach ($subjectList as $v):?>
                 <?php if($v['level'] == 0):?>
-                <input type="checkbox"  lay-filter="firstLevel" name="subject[0][]" pid="<?= $v['pid']?>" value="<?= $v['id'];?>" title="<?= $v['name']?>" lay-skin="primary" >
+                <input type="checkbox"  lay-filter="firstLevel" name="subject[0][]" pid="<?= $v['pid']?>" value="<?= $v['id'];?>"  <?= in_array($v['id'],$webSubjectList[0]) ?'checked':'' ?>  title="<?= $v['name']?>" lay-skin="primary" >
                 <?php endif;?>
             <?php endforeach;?>
         </div>
     </div>
-       <div class="layui-form-item twoSubjectList" style="display: none">
+       <div class="layui-form-item twoSubjectList" style="<?=!empty($webSubjectList[1]) ? '':'display: none"'; ?>">
            <label class="layui-form-label">二级分类</label>
            <div class="layui-input-block">
-
+               <?php foreach ($subjectList as $v):?>
+                   <?php if($v['level'] == 1):?>
+                       <input type="checkbox"  lay-filter="firstLevel" name="subject[1][]" pid="<?= $v['pid']?>" value="<?= $v['id'];?>"  <?= in_array($v['id'],$webSubjectList[1]) ?'checked':'' ?>  title="<?= $v['name']?>" lay-skin="primary" >
+                   <?php endif;?>
+               <?php endforeach;?>
            </div>
     </div>
-    <div class="layui-form-item threeSubjectList" style="display: none">
+    <div class="layui-form-item threeSubjectList" style=" <?=!empty($webSubjectList[2]) ? '':'display: none"'; ?> ">
         <label class="layui-form-label">三级分类</label>
         <div class="layui-input-block">
             <?php foreach ($subjectList as $v):?>
                 <?php if($v['level'] == 2):?>
-                    <input type="checkbox"  lay-filter="threeLevel" name="subject[2][]" pid="<?= $v['pid']?>"  value="<?= $v['id'];?>" title="<?= $v['name']?>" lay-skin="primary" >
+                    <input type="checkbox"  lay-filter="threeLevel" name="subject[2][]" pid="<?= $v['pid']?>"  value="<?= $v['id'];?>"  <?= in_array($v['id'],$webSubjectList[2]) ?'checked':'' ?> title="<?= $v['name']?>" lay-skin="primary" >
                 <?php endif;?>
             <?php endforeach;?>
         </div>
@@ -71,23 +75,27 @@
         <button type="button" class="layui-btn" id="coverUrl">
             <i class="layui-icon">&#xe67c;</i>上传预览图
         </button>
-        <input type="text" name="coverUrl" hidden>
     </div>
-    <div class="layui-form-item previewImg" style="display: none">
-        <label class="layui-form-label">预览图</label>
-        <img src="http://pic.58itbook.com/previewImg/190326/7363619800.png" alt="" style="max-width: 80%">
-    </div>
+
+        <div class="layui-form-item previewImg" style="<?= empty($info['coverUrl']) ? 'display:none':'' ?>">
+            <input type="text" name="coverUrl" hidden value="<?=$info['coverUrl']?>">
+            <label class="layui-form-label">预览图</label>
+            <img src="<?=Yii::$app->params['domain']['pic'].$info['coverUrl'];?>" alt="" style="max-width: 80%">
+        </div>
+
     <div class="layui-form-item">
         <label class="layui-form-label">资源</label>
         <button type="button" class="layui-btn" id="soureUrl">
             <i class="layui-icon">&#xe67c;</i>上传资源包
         </button>
-        <input type="text" name="resources" hidden>
     </div>
-    <div class="layui-form-item resourcesUrl" style="display: none">
-        <label class="layui-form-label">资源路径</label>
-        <label class="layui-form-label url"></label>
-    </div>
+
+        <div class="layui-form-item resourcesUrl" style="<?= empty($info['soureUrl']) ? 'display:none':'' ?>">
+            <input type="text" name="resources" hidden value="<?= $info['soureUrl']?>" >
+            <label class="layui-form-label">资源路径</label>
+            <label class="layui-form-label url"><?= Yii::$app->params['domain']['resource'].$info['soureUrl']?></label>
+        </div>
+
     <div class="layui-form-item">
         <label class="layui-form-label">价格</label>
         <div class="layui-input-block">
@@ -97,7 +105,15 @@
     <div class="layui-form-item layui-form-text">
         <label class="layui-form-label">文本域</label>
         <div class="layui-input-block">
-            <script id="manual" name="manual" type="text/plain"><?=!empty($model->manual) ? $model->manual:''?></script>
+            <script id="manual" name="manual" type="text/plain">
+                <?=$info['manual'];?>
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">浏览量</label>
+        <div class="layui-input-block">
+            <input type="text" name="browseNum"   placeholder="请输入浏览量" autocomplete="off" class="layui-input" value="<?= $info['browseNum']?>">
         </div>
     </div>
     <div class="layui-form-item">
@@ -194,6 +210,7 @@
 <script>
     $(document).ready(function(){
         var ue = UE.getEditor('manual');
+
     });
 
     //初始化表单
@@ -287,7 +304,7 @@
                     return false;
                 }
                 $('input[name="resources"]').val(res.url);
-                $('.resourcesUrl').find('.url').html(res.url);
+                $('.resourcesUrl').find('.url').html("<?= Yii::$app->params['domain']['resource']?>"+res.url);
                 $('.resourcesUrl').show();
             }
             ,error: function(){
@@ -297,6 +314,10 @@
     });
 
     //生存随机数
+
+    if($('input[name="browseNum"]').val() == 0){
+        $('input[name="browseNum"]').val(randomNum(1000,5000));
+    }
     if($('input[name="collectionNum"]').val() == 0){
         $('input[name="collectionNum"]').val(randomNum(100,200));
     }
@@ -305,6 +326,9 @@
     }
     if($('input[name="shareNum"]').val() == 0){
         $('input[name="shareNum"]').val(randomNum(50,300));
+    }
+    if($('input[name="downloadNum"]').val() == 0){
+        $('input[name="downloadNum"]').val(randomNum(50,100));
     }
 
 

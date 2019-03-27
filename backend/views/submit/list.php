@@ -5,7 +5,11 @@ use yii\widgets\LinkPager;
   <a href="">网站模板</a>
   <a><cite>资源管理</cite></a>
 </span>
-
+    <div class="row top20per">
+        <a class="layui-btn layui-btn-sm" href="<?=\yii\helpers\Url::to(['submit/add'])?>">
+            <i class="layui-icon">&#xe608;</i> 添加
+        </a>
+    </div>
 <table class="layui-table center-table">
     <colgroup>
         <col width="150">

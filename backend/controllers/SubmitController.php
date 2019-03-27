@@ -8,6 +8,7 @@ use backend\models\WebSource;
 use backend\models\WebSubject;
 use common\models\DbWebSource;
 use common\models\DbWebSubject;
+use common\models\DbWebSubRelation;
 use Yii;
 use yii\data\Pagination;
 use yii\web\Controller;
@@ -30,22 +31,56 @@ class SubmitController extends CommonController
      * web 审核页面
      * */
     public function actionList(){
-        $total =  DbWebSource::find()->where(['status'=>0,'isDelete'=>0])->count();
+        $total =  DbWebSource::find()->where(['isDelete'=>0])->count();
         $page = new Pagination(['totalCount' => $total,'pageSize'=>30]);
         $list = DbWebSource::find()
-            ->where(['status'=>0,'isDelete'=>0])
+            ->where(['isDelete'=>0])
             ->offset($page->offset)
             ->limit($page->limit)
             ->asArray()
             ->all();
         return $this->render('list',['list'=>$list,'pages'=>$page]);
     }
-
+    /**
+     * .web 添加页
+     * @return string
+     */
+    public function actionAdd()
+    {
+        $model = new WebSource();
+        $model->scenario = 'submit-web';
+        $subjectList = DbWebSubject::find()->where(['isDelete'=>0])->asArray()->all();
+        if(Yii::$app->request->isPost) {
+            $model->uId=$this->uId;
+            $model->load(Yii::$app->request->post(), '');
+            $checkRes = $model->validate();
+            if (!$checkRes) {
+                return $this->render('add', [
+                    'error' => reset($model->getErrors())[0],
+                    'model' => $model,
+                    'subjectList'=>$subjectList,
+                ]);
+            }
+            $result = $model->addWebSource();
+            if(!$result){
+                return $this->render('add', [
+                    'error' =>'发布失败',
+                    'model' => $model,
+                    'subjectList'=>$subjectList,
+                ]);
+            }
+            return $this->redirect(['submit/add']);
+        }
+        return $this->render('add', [
+            'model' => $model,
+            'subjectList'=>$subjectList,
+        ]);
+    }
 
 
 
     /**
-     * .web 发布页
+     * .web 审核页
      * @return string
      */
     public function actionWeb()
@@ -56,6 +91,12 @@ class SubmitController extends CommonController
         $model->id=$id;
         $info = DbWebSource::find()->where(['id'=>$id])->asArray()->one();
         $subjectList = DbWebSubject::find()->where(['isDelete'=>0])->asArray()->all();
+        $firstLevel = DbWebSubRelation::find()->select('subId')->where(['isDelete'=>0,'webId'=>$id,'level'=>0])->asArray()->all();
+        $twoLevel = DbWebSubRelation::find()->select('subId')->where(['isDelete'=>0,'webId'=>$id,'level'=>1])->asArray()->all();
+        $threeLevel = DbWebSubRelation::find()->select('subId')->where(['isDelete'=>0,'webId'=>$id,'level'=>2])->asArray()->all();
+        $webSubjectList[0] = array_column($firstLevel,'subId');
+        $webSubjectList[1] = array_column($twoLevel,'subId');
+        $webSubjectList[2] = array_column($threeLevel,'subId');
         if(Yii::$app->request->isPost) {
             $model->uId=$this->uId;
             $model->load(Yii::$app->request->post(), '');
@@ -65,7 +106,8 @@ class SubmitController extends CommonController
                     'error' => reset($model->getErrors())[0],
                     'info'=>$info,
                     'model' => $model,
-                    'subjectList'=>$subjectList
+                    'subjectList'=>$subjectList,
+                    'webSubjectList'=>$webSubjectList
                 ]);
             }
             $result = $model->addWebSource();
@@ -74,20 +116,17 @@ class SubmitController extends CommonController
                     'error' =>'发布失败',
                     'info'=>$info,
                     'model' => $model,
-                    'subjectList'=>$subjectList
+                    'subjectList'=>$subjectList,
+                    'webSubjectList'=>$webSubjectList
                 ]);
             }
-            return $this->render('web', [
-                    'success' => '发布成功',
-                    'info'=>$info,
-                    'model' => $model,
-                    'subjectList'=>$subjectList
-                ]);
+            return $this->redirect(['submit/web','id'=>$id]);
         }
         return $this->render('web', [
             'model' => $model,
             'info'=>$info,
-            'subjectList'=>$subjectList
+            'subjectList'=>$subjectList,
+            'webSubjectList'=>$webSubjectList
         ]);
     }
 

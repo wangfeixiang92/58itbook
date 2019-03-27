@@ -29,37 +29,35 @@ class WebSubRelation extends Model
     public function bindSubjectIds($webId,$subjectIds){
 
         //删除原来的关系
-        $one =  DbWebSubRelation::findOne(['webId'=>$webId]);
-        if($one){
-            $one->isDelete=1;
-            $one->save();
-        }
+        $one =  DbWebSubRelation::findOne(['webId'=>$webId])->delete();
         $db = new DbWebSubRelation();
         //存储当前关系
         if(isset($subjectIds[0])){
           foreach ($subjectIds[0] as $v){
-              $db->subId=$v;
-              $db->webId=$webId;
-              $db->level=0;
-              $db->save();
-            echo $db->find()->createCommand()->getRawSql();die;
+              $_model = clone $db;
+              $_model->subId=$v;
+              $_model->webId=$webId;
+              $_model->level=0;
+              $_model->save();
           }
         }
         if(isset($subjectIds[1])){
             foreach ($subjectIds[1] as $v){
-                $db->subId=$v;
-                $db->webId=$webId;
-                $db->level=1;
-                $db->save();
+                $_model = clone $db;
+                $_model->subId=$v;
+                $_model->webId=$webId;
+                $_model->level=1;
+                $_model->save();
             }
         }
 
         if(isset($subjectIds[2])){
             foreach ($subjectIds[2] as $v){
-                $db->subId=$v;
-                $db->webId=$webId;
-                $db->level=1;
-                $db->save();
+                $_model = clone $db;
+                $_model->subId=$v;
+                $_model->webId=$webId;
+                $_model->level=2;
+                $_model->save();
             }
         }
         return true;

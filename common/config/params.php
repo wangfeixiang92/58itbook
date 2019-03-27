@@ -5,6 +5,7 @@ return [
         'amin'=>'http://admin.58itbook.com',
         'pic'=>'http://pic.58itbook.com',
         'demo'=>'http://demo.58itbook.com',
+        'resource'=>'http://www.58itbook.com/resources',
     ],
     'emailConfig'=>[
         'adminEmail'=>'2120371570@qq.com',
