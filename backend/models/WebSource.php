@@ -124,7 +124,7 @@ class WebSource extends Model
         $source->oldUrl = $this->oldUrl;
         $source->coverUrl=$this->coverUrl;
         $source->soureUrl=$this->resources;
-        $source->previewUrl= str_ireplace('resource','preview',$this->soureUrl);
+        $source->previewUrl= explode('.',str_ireplace('resource','preview',$source->soureUrl))[0];
         $source->browseNum = $this->browseNum;
         $source->collectionNum = $this->collectionNum;
         $source->likeNum = $this->likeNum;
@@ -166,7 +166,7 @@ class WebSource extends Model
         $source->oldUrl = $this->oldUrl;
         $source->coverUrl=$this->coverUrl;
         $source->soureUrl=$this->resources;
-        $source->previewUrl= str_ireplace('resource','preview',$this->soureUrl);
+        $source->previewUrl= explode('.',str_ireplace('resource','preview',$source->soureUrl))[0];
         $source->browseNum = $this->browseNum;
         $source->collectionNum = $this->collectionNum;
         $source->likeNum = $this->likeNum;
