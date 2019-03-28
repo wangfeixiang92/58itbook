@@ -3,7 +3,7 @@
     <a href="<?= Yii::$app->urlManager->createUrl(['submit/list']) ?>">资源管理</a>
     <a><cite>添加网站模板</cite></a>
 </span>
-<form class="layui-form top40per" action="<?= Yii::$app->urlManager->createUrl(['submit/web'])?>" method="post" enctype="multipart/form-data">
+<form class="layui-form top40per" action="<?= Yii::$app->urlManager->createUrl(['submit/add'])?>" method="post" enctype="multipart/form-data">
     <?php if(isset($error)):?>
     <div class="layui-form-item">
         <div class="layui-input-block center"><span class="layui-badge">错误：<?=$error?></span></div>
@@ -38,29 +38,21 @@
         <div class="layui-input-block">
             <?php foreach ($subjectList as $v):?>
                 <?php if($v['level'] == 0):?>
-                <input type="checkbox"  lay-filter="firstLevel" name="subject[0][]" pid="<?= $v['pid']?>" value="<?= $v['id'];?>"    title="<?= $v['name']?>" lay-skin="primary" >
+                <input type="checkbox"  lay-filter="firstLevel" name="subject[0][]" pid="<?= $v['pid']?>"  value="<?= $v['id'];?>"    title="<?= $v['name']?>" lay-skin="primary" >
                 <?php endif;?>
             <?php endforeach;?>
         </div>
     </div>
-       <div class="layui-form-item twoSubjectList" style="<?=!empty($webSubjectList[1]) ? '':'display: none"'; ?>">
+       <div class="layui-form-item twoSubjectList" style="display: none">
            <label class="layui-form-label">二级分类</label>
            <div class="layui-input-block">
-               <?php foreach ($subjectList as $v):?>
-                   <?php if($v['level'] == 1):?>
-                       <input type="checkbox"  lay-filter="firstLevel" name="subject[1][]" pid="<?= $v['pid']?>" value="<?= $v['id'];?>"  title="<?= $v['name']?>" lay-skin="primary" >
-                   <?php endif;?>
-               <?php endforeach;?>
+
            </div>
     </div>
-    <div class="layui-form-item threeSubjectList" style=" <?=!empty($webSubjectList[2]) ? '':'display: none"'; ?> ">
+    <div class="layui-form-item threeSubjectList" style=" display: none ">
         <label class="layui-form-label">三级分类</label>
         <div class="layui-input-block">
-            <?php foreach ($subjectList as $v):?>
-                <?php if($v['level'] == 2):?>
-                    <input type="checkbox"  lay-filter="threeLevel" name="subject[2][]" pid="<?= $v['pid']?>"  value="<?= $v['id'];?>"title="<?= $v['name']?>" lay-skin="primary" >
-                <?php endif;?>
-            <?php endforeach;?>
+
         </div>
     </div>
     <div class="layui-form-item">

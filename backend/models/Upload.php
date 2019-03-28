@@ -118,6 +118,54 @@ class Upload extends Model
 
 
 
+    /**
+
+     * 解压缩
+
+     * @method unzip_file
+
+     * @param  string     $zipName 压缩包名称
+
+     * @param  string     $dest    解压到指定目录
+
+     * @return boolean              true|false
+
+     */
+
+    public function unzip_file( $zipName,$dest){
+
+        //检测要解压压缩包是否存在
+//        if(!is_file($zipName)){
+//            return false;
+//
+//        }
+
+        //检测目标路径是否存在
+
+        if(!is_dir($dest)){
+
+            mkdir($dest,0777,true);
+
+        }
+
+        $zip=new \ZipArchive();
+
+        if($zip->open($zipName)){
+
+            $zip->extractTo($dest);
+
+            $zip->close();
+
+            return true;
+
+        }else{
+
+            return false;
+
+        }
+
+    }
+
 
 
 

@@ -45,6 +45,7 @@ use yii\widgets\LinkPager;
         <td>
             <div class="layui-btn-group">
                 <a class="layui-btn layui-btn-sm " href="<?=\yii\helpers\Url::to(['submit/web','id'=>$v['id']])?>">审核</a>
+                <a class="layui-btn layui-btn-sm  layui-btn-normal">解压</a>
                 <a class="layui-btn layui-btn-sm  layui-btn-normal">预览</a>
                 <button class="layui-btn layui-btn-sm layui-btn-danger">锁定</button>
             </div>

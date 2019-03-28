@@ -110,7 +110,7 @@ class SubmitController extends CommonController
                     'webSubjectList'=>$webSubjectList
                 ]);
             }
-            $result = $model->addWebSource();
+            $result = $model->editWebSource();
             if(!$result){
                 return $this->render('web', [
                     'error' =>'发布失败',
@@ -130,50 +130,24 @@ class SubmitController extends CommonController
         ]);
     }
 
+
     /*
-     * 上传图片
+     *  解压文件
      * */
-    public function  actionUpload()
-    {
 
-        if (Yii::$app->request->isPost) {
-            $model = new Upload();
-            $model->img= UploadedFile::getInstanceByName('file');
-            $model->load(Yii::$app->request->post(), '');
-            $checkRes = $model->validate();
-            if (!$checkRes) {
-                return json_encode(['error'=> reset($model->getErrors())[0]]);
+        public function actionUnzip(){
+            $id= Yii::$app->request->getQueryParam('id');
+            $info = DbWebSource::find()->where(['id'=>$id])->asArray()->one();
+            $zipUrl = '../frontend/web'.$info['soureUrl'];
+            $previewUrl ='../frontend/web'.str_ireplace('resource','preview',$zipUrl);
+            if((new Upload())->unzip_file($zipUrl,$previewUrl)){
+                echo 0;
+                echo json_encode(['message'=>'解压成功']);
+            }else{
+                echo 1;
+                echo json_encode(['message'=>'解压失败']);
             }
-            $url = $model->uploadImg();
-            if(!$url){
-                return json_encode(['error'=> '文件上传失败']);
-            }
-            return json_encode(['url'=> $url]);
         }
-        return json_encode(['error'=> '请求方式非法']);
-    }
 
-    /*
- * 上传文件
- * */
-    public function  actionUploadResource()
-    {
-
-        if (Yii::$app->request->isPost) {
-            $model = new Upload();
-            $model->resources= UploadedFile::getInstanceByName('file');
-            $model->load(Yii::$app->request->post(), '');
-            $checkRes = $model->validate();
-            if (!$checkRes) {
-                return json_encode(['error'=> reset($model->getErrors())[0]]);
-            }
-            $url = $model->uploadResource();
-            if(!$url){
-                return json_encode(['error'=> '文件上传失败']);
-            }
-            return json_encode(['url'=> $url]);
-        }
-        return json_encode(['error'=> '请求方式非法']);
-    }
 
 }

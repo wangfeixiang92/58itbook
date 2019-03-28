@@ -29,7 +29,7 @@ class WebSubRelation extends Model
     public function bindSubjectIds($webId,$subjectIds){
 
         //删除原来的关系
-        $one =  DbWebSubRelation::findOne(['webId'=>$webId])->delete();
+        $one =  DbWebSubRelation::deleteAll(['webId'=>$webId]);
         $db = new DbWebSubRelation();
         //存储当前关系
         if(isset($subjectIds[0])){

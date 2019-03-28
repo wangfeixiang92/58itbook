@@ -113,8 +113,49 @@ class WebSource extends Model
     }
 
 
-
     public function addWebSource()
+    {
+        $source = new DbWebSource();
+        $source->uId = DbUser::getSystemUid();
+        $source->title = $this->title;
+        $source->keyword = $this->keyword;
+        $source->describe = $this->describe;
+        $source->manual = $this->manual;
+        $source->oldUrl = $this->oldUrl;
+        $source->coverUrl=$this->coverUrl;
+        $source->soureUrl=$this->resources;
+        $source->previewUrl= str_ireplace('resource','preview',$this->soureUrl);
+        $source->browseNum = $this->browseNum;
+        $source->collectionNum = $this->collectionNum;
+        $source->likeNum = $this->likeNum;
+        $source->shareNum = $this->shareNum;
+        $source->commentNum = $this->commentNum;
+        $source->downloadNum = $this->downloadNum;
+        $source->IE = $this->IE;
+        $source->isIE = $this->isIE;
+        $source->isFirefox = $this->isFirefox;
+        $source->isChrome = $this->isChrome;
+        $source->isSafari = $this->isSafari;
+        $source->updateTime = time();
+        $source->registerTime = date('Y-m-d H:i:s',time());
+        $source->price = $this->price;
+        $source->status=1;
+        $transaction = Yii::$app->db->beginTransaction();
+        $result = $source->save();
+        $id = Yii::$app->db->lastInsertID;
+        $r1 = (new WebSubRelation)->bindSubjectIds($id,$this->subject);
+        $r2 =(new EveryDayData())->addNewWebNum();
+        if($result && $r1 && $r2){
+            $transaction->commit();
+            return true;
+        }else{
+            $transaction->rollBack();
+            return false;
+        }
+    }
+
+    //审核web资源
+    public function editWebSource()
     {
         $source = DbWebSource::findOne(['id'=>$this->id]);
         $source->uId = DbUser::getSystemUid();
