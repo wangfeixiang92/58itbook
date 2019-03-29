@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50725
 File Encoding         : 65001
 
-Date: 2019-03-22 18:59:14
+Date: 2019-03-29 18:00:14
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,13 +30,16 @@ CREATE TABLE `everDayData` (
   `date` date DEFAULT NULL COMMENT '日期',
   PRIMARY KEY (`id`),
   UNIQUE KEY `date` (`date`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of everDayData
 -- ----------------------------
-INSERT INTO `everDayData` VALUES ('8', '1', '8', '0', '0', '23', '0', '2019-03-20');
-INSERT INTO `everDayData` VALUES ('9', '0', '0', '0', '0', '2', '0', '2019-03-21');
+INSERT INTO `everDayData` VALUES ('8', '1', '8', '0', '0', '23', '31', '2019-03-20');
+INSERT INTO `everDayData` VALUES ('9', '0', '0', '0', '0', '2', '31', '2019-03-21');
+INSERT INTO `everDayData` VALUES ('10', '0', '0', '0', '0', '0', '32', '2019-03-27');
+INSERT INTO `everDayData` VALUES ('11', '0', '0', '0', '0', '0', '19', '2019-03-28');
+INSERT INTO `everDayData` VALUES ('12', '0', '0', '0', '0', '0', '17', '2019-03-29');
 
 -- ----------------------------
 -- Table structure for forgetpassword
