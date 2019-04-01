@@ -15,10 +15,14 @@ class   CommonController extends Controller
     public $userInfo=[];
     public function init()
     {
+        //用户信息
         $userInfo =json_decode(Yii::$app->session->get(Yii::$app->params['redisUserinfoKey']),true);
-        $this->uId =$userInfo['uId'];
+        Yii::$app->view->params['uId'] =$userInfo['uId'];
         $this->userInfo =$userInfo;
+        empty($this->userInfo) ?   Yii::$app->view->params['loginStatus'] = 0 :  Yii::$app->view->params['loginStatus'] =1;
         Yii::$app->view->params['userInfo']=$userInfo;
+
+        //seo
         $seo['title'] ='ITbook-收集最全最新最好的jQuery插件';
         $seo['keywords'] ='jQuery,jQuery特效,jQuery ui,jQuery插件,jQuery 教程,css3,网页特效,JS特效';
         $seo['description'] ='本站致力于收集jQuery插件和提供各种jQuery特效的详细使用方法,在线预览，jQuery插件下载及教程';

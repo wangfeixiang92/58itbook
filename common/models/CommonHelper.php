@@ -28,4 +28,19 @@ class CommonHelper
         }
     }
 
+    /*
+     * 截取时间
+     * */
+    public static function getRegisetrDate($datetime){
+            return substr($datetime,0,10);
+    }
+
+    /*
+     * 解析点击,下载,点赞等数
+     * */
+    public static function  getAnalysisNum($str){
+           return number_format($str);
+    }
 }
+
+
