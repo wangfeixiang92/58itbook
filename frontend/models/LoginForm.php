@@ -265,6 +265,7 @@ class LoginForm extends Model
         $user->updateTime = $this->updateTime;
         $user->registerTime = $this->registerTime;
         $user->loginTime = $this->loginTime;
+        $user->photo ='img/user.gif';
         $user->level=1;
         $user->levelName=DbUserLevelName::findOne(['level'=>1,'isDelete'=>0])['levelName'];
         $result = $user->save();

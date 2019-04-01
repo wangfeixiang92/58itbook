@@ -19,9 +19,10 @@ use yii\widgets\Breadcrumbs;
     <title> <?=isset($this->params['seo']['title'])?Html::encode($this->params['seo']['title']):'';?></title>
     <meta name="keywords" content="<?=isset($this->params['seo']['keywords'])?Html::encode($this->params['seo']['keywords']):'';?>" />
     <meta name="description" content="<?=isset($this->params['seo']['description'])?Html::encode($this->params['seo']['description']):'';?>" />
+    <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('font-awesome-4.7.0/css/font-awesome.min.css') ?>">
     <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/css/style.css') ?>">
     <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/css/swiper.min.css') ?>">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!--    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
     <!--[if lt IE 9]>
     <script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/html5shiv.js')?>"></script>
     <![endif]-->
@@ -44,12 +45,25 @@ use yii\widgets\Breadcrumbs;
             <input class="key" type="text" name="s" placeholder="输入关键词"> <input class="go" type="submit" value="搜索">
         </form>
         <?php if(!$this->params['loginStatus']):?>
-            <a class="login" href="<?=\yii\helpers\Url::to(['login/index','callback'=>Yii::$app->request->getHostInfo().Yii::$app->request->url])?>">登录</a>
-            <a class="reg" href="<?=\yii\helpers\Url::to(['login/register']) ?>">注册</a>
+            <a class="login rgisetr-login-btn" href="<?=\yii\helpers\Url::to(['login/index','callback'=>Yii::$app->request->getHostInfo().Yii::$app->request->url])?>">登录</a>
+            <a class="reg rgisetr-login-btn" href="<?=\yii\helpers\Url::to(['login/register']) ?>">注册</a>
         <?php else:?>
-            <div class="userPhoto" >
-                <img src="/img/user.gif">
-            </div>
+        <div class="userPhoto">
+            <a  href="#">
+                <img src="<?=$this->params['userInfo']['photo']?>">
+            </a>
+            <ul style="display: none">
+                <li><a href="<?=\yii\helpers\Url::to(['person/index']) ?>">个人主页</a></li>
+                <li><a href="">账户设置</a></li>
+                <li><a href="">我的私信</a></li>
+                <li><a href="">我的签到</a></li>
+                <li><a href="">我的插件</a></li>
+                <li><a href="">我的收藏</a></li>
+                <li><a href="">我的记录</a></li>
+                <li><a href="">我的粉丝</a></li>
+                <li><a href="<?=\yii\helpers\Url::to(['login/logout']) ?>">退出登陆</a></li>
+            </ul>
+        </div>
         <?php endif;?>
     </div>
 </header>
@@ -65,7 +79,7 @@ use yii\widgets\Breadcrumbs;
 <script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/jquery.min.js')?>"></script>
 <script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/swiper.min.js')?>"></script>
 <script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/script.js')?>"></script>
-
+<script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/base.js')?>"></script>
 <div style="display:none">
     <script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/z_stat.js')?>"></script>
     <script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/hm.js')?>"></script>

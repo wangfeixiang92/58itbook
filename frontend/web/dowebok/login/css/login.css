@@ -29,3 +29,17 @@
 .form .form-notice { color: #22d18e; }
 .form .ui-input.focus { border-bottom-color: #22d18e; }
 .form .ui-button { width: 100%; margin: 40px 0; }
+.form input[name="code"]{
+    width: 50%;
+}
+.form .get-code-button{
+    float: right;
+    width: 38%;
+    height: 42px;
+    color: white;
+    cursor: pointer;
+    background-color: #21B384;
+    font-size: 13px;
+    text-align: center;
+    line-height: 42px;
+}

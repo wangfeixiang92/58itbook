@@ -7,7 +7,7 @@
             </div>
             <?php if(isset($error)):?>
                 <p style="text-align: center;color: red">
-                    <?= $error?>
+                    <i class="fa fa-exclamation-circle"></i>错误：<?= $error?>
                 </p>
             <?php endif;?>
             <div class="form-body">
@@ -23,7 +23,7 @@
                     <a href="<?= Yii::$app->urlManager->createUrl(['login/forget-password'])?>">忘记密码？</a>
                 </p>
                 <input type="hidden" name='<?=Yii::$app->request->csrfParam?>' value="<?=Yii::$app->request->csrfToken?>"/>
-                <button id="submitbtn" style="background-color: #21B384;" class="ui-button ui-button-primary">登录</button>
+                <button id="submitbtn" style="background-color: #21B384;color: white" class="ui-button ui-button-primary">登录</button>
             </div>
         </form>
     </div>

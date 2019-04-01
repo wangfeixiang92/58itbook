@@ -1,55 +1,38 @@
-<div class="container">
-    <form class="form-horizontal login-from" style="width: 50%" action="<?= Yii::$app->urlManager->createUrl(['login/forget-password'])?>" method="post">
-        <div class="form-group">
-            <label  class="col-sm-2 control-label"></label>
-            <div class="col-sm-10">
-                <h2 class="form-signin-heading login-title">重置密码</h2>
+<div class="main">
+    <div class="contact" style="padding: 20px; background-color: #fff;">
+        <form id="wp_login_form"  action="<?= Yii::$app->urlManager->createUrl(['login/forget-password'])?>" method="post" class="form">
+            <div class="form-head">
+                <h2>重置密码</h2>
+                <p>想起密码？<a href="<?= Yii::$app->urlManager->createUrl(['login/index'])?>">前往登录</a></p>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label"></label>
-            <div class="col-sm-10">
-                <p class="login-label">想起密码？<a href="<?= Yii::$app->urlManager->createUrl(['login/index'])?>">前往登录</a></p>
-                <?php if(isset($error)):?>
-                    <p class="center error-label"><i class="fa fa-exclamation-circle"></i>错误：<?=$error?></p>
-                <?php endif;?>
-            </div>
-        </div>
+            <?php if(isset($error)):?>
+                <p style="text-align: center;color: red">
+                    <i class="fa fa-exclamation-circle"></i>错误:<?= $error?>
+                </p>
+            <?php endif;?>
+            <div class="form-body">
+                <div class="ui-input">
+                    <input type="text" id="userEmail" name="email" placeholder="请输入邮箱"  value="<?=isset($model->email) ? $model->email : '' ?>">
+                </div>
+                <div class="ui-input">
+                    <input type="text" name="code" placeholder="请输入验证码"  value="<?=isset($model->code) ? $model->code : '' ?>">
+                    <span class="get-code-button">获取验证码</span>
+                </div>
 
-        <div class="form-group">
-            <label  class="col-sm-2 control-label">邮箱</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="userEmail" name="email" placeholder="请输入邮箱"  value="<?=isset($model->email) ? $model->email : '' ?>">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">验证码</label>
-            <div class="col-sm-10 input-group" style="    padding-left: 2.5%;padding-right: 2.5%;">
-                <input type="text" class="form-control " name="code" placeholder="请输入验证码"  value="<?=isset($model->code) ? $model->code : '' ?>">
-                <span class="input-group-addon login-verification-code-btn btn btn-success get-code-button">获取验证码</span>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">密码</label>
-            <div class="col-sm-10">
-                <input type="password" class="form-control"  name="password" placeholder="请输入密码"  value="<?=isset($model->password) ? $model->password : '' ?>">
-            </div>
-        </div>
-        <div class="form-group">
-            <label  class="col-sm-2 control-label">确认密码</label>
-            <div class="col-sm-10">
-                <input type="password" class="form-control"  name="rpassword" placeholder="再次确认密码"  value="<?=isset($model->rpassword) ? $model->rpassword : '' ?>">
-            </div>
-        </div>
+                <div class="ui-input">
+                    <input type="password" name="password" placeholder="密码" value="<?= $model->password?$model->password:'';?>">
+                </div>
 
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
+                <div class="ui-input">
+                    <input type="password"  name="rpassword" placeholder="再次确认密码"  value="<?=isset($model->rpassword) ? $model->rpassword : '' ?>">
+                </div>
+
                 <input type="hidden" name='<?=Yii::$app->request->csrfParam?>' value="<?=Yii::$app->request->csrfToken?>"/>
-                <button type="submit" class="btn btn-default btn-block black" >重置密码</button>
+                <button id="submitbtn" style="background-color: #21B384;color: white" class="ui-button ui-button-primary">重置密码</button>
             </div>
-        </div>
-    </form>
-</div> <!-- /container -->
+        </form>
+    </div>
+</div>
 <script src="<?= \common\models\CommonHelper::getAssetUrl('/js/mailCompletion.js')?>"></script>
 <script>
     //初始化自动邮箱补全插件

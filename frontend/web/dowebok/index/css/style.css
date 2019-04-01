@@ -25,8 +25,9 @@ body { border-top: 50px solid #323436; border-bottom: 50px solid #323436; font: 
 .search form { float: left; margin-right: 10px; background-color: #434649;}
 .search .key { float: left; width: 152px; height: 14px; padding: 9px; border: medium none; line-height: 14px; color: #8b8d90; background-color: transparent;}
 .search .go { float: left; width: 30px; height: 32px; border: medium none; text-indent: -9999px; background: url(../images/yy-icon.png) -350px -176px no-repeat; cursor: pointer;}
-.search a { float: left; height: 32px; padding: 0 20px; line-height: 32px; text-align: center; color: #acacac; background-color: #505050; text-decoration: none;}
-.search a:hover { color: #fff;}
+.search .rgisetr-login-btn{ float: left; height: 32px; padding: 0 20px; line-height: 32px; text-align: center; color: #acacac;  text-decoration: none;}
+.search .rgisetr-login-btn{background-color: #505050;}
+.search .rgisetr-login-btn:hover { color: #fff;}
 .search .reg { color: #fff; background-color: #6cc30d; background-color: #21B384;}
 .search .reg:hover { background-color: #198764; background-color: #1FA67A;}
 /*.search .login { color: #fff; background-color: #1FA67A;}*/
@@ -219,9 +220,42 @@ body .swiper-container { float: left; width: 824px;}
 .userPhoto{
     float: right;
     margin-top: -3px;
+    cursor: pointer;
 }
+
 .userPhoto img{
-    height: 38px;
+    position: absolute;
+    margin-top: -6px;
+    right: -75px;
     border-radius: 50%;
-    line-height: 38px;
+}
+.userPhoto ul{
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    z-index: 99;
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    margin-top: 45px;
+}
+.userPhoto li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.userPhoto li a{
+
+}
+.userPhoto li:hover{
+    background-color: #21B384;
+}
+.userPhoto li a:hover{
+    color: white;
+    text-underline: none!important;
+
 }

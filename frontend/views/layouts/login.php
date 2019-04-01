@@ -15,12 +15,16 @@ use yii\widgets\Breadcrumbs;
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= Html::csrfMetaTags() ?>
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title> <?=isset($this->params['seo']['title'])?Html::encode($this->params['seo']['title']):'';?></title>
     <meta name="keywords" content="<?=isset($this->params['seo']['keywords'])?Html::encode($this->params['seo']['keywords']):'';?>" />
     <meta name="description" content="<?=isset($this->params['seo']['description'])?Html::encode($this->params['seo']['description']):'';?>" />
+    <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('font-awesome-4.7.0/css/font-awesome.min.css') ?>">
     <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/css/style.css') ?>">
     <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('dowebok/login/css/login.css')?>">
+    <script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/jquery.min.js')?>"></script>
+    <script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/login/js/script.js')?>"></script>
 </head>
 <body>
 <header class="hd">
@@ -37,8 +41,27 @@ use yii\widgets\Breadcrumbs;
         <form method="get" action="/">
             <input class="key" type="text" name="s" placeholder="输入关键词"> <input class="go" type="submit" value="搜索">
         </form>
-        <a class="login" href="<?=\yii\helpers\Url::to(['login/index','callback'=>Yii::$app->request->getHostInfo().Yii::$app->request->url])?>">登录</a>
-        <a class="reg" href="<?=\yii\helpers\Url::to(['login/register']) ?>">注册</a>
+        <?php if(!$this->params['loginStatus']):?>
+            <a class="login rgisetr-login-btn" href="<?=\yii\helpers\Url::to(['login/index','callback'=>Yii::$app->request->getHostInfo().Yii::$app->request->url])?>">登录</a>
+            <a class="reg rgisetr-login-btn" href="<?=\yii\helpers\Url::to(['login/register']) ?>">注册</a>
+        <?php else:?>
+            <div class="userPhoto">
+                <a  href="#">
+                    <img src="<?=$this->params['userInfo']['photo']?>">
+                </a>
+                <ul style="display: none">
+                    <li><a href="<?=\yii\helpers\Url::to(['person/index']) ?>">个人主页</a></li>
+                    <li><a href="">账户设置</a></li>
+                    <li><a href="">我的私信</a></li>
+                    <li><a href="">我的签到</a></li>
+                    <li><a href="">我的插件</a></li>
+                    <li><a href="">我的收藏</a></li>
+                    <li><a href="">我的记录</a></li>
+                    <li><a href="">我的粉丝</a></li>
+                    <li><a href="<?=\yii\helpers\Url::to(['login/logout']) ?>">退出登陆</a></li>
+                </ul>
+            </div>
+        <?php endif;?>
     </div>
 </header>
 <?php $this->beginBody() ?>
@@ -50,8 +73,7 @@ use yii\widgets\Breadcrumbs;
     <p>&copy; CopyRight 2079 itbook.com <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备14034220号-1</a></p>
 </footer>
 
-<script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/jquery.min.js')?>"></script>
-<script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/login/js/script.js')?>"></script>
+
 </body>
 </html>
 <?php $this->endPage() ?>
