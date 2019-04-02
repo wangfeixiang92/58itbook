@@ -15233,3 +15233,1480 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1554116479.6207
     'REQUEST_TIME' => 1554116479
 ]
+2019-04-02 01:30:12 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+    in /vagrant_data/58itbook/frontend/controllers/SiteController.php:46
+2019-04-02 01:30:12 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:30:12 [192.168.33.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://www.58itbook.com/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168612.0182
+    'REQUEST_TIME' => 1554168612
+]
+2019-04-02 01:31:01 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Request.php:284
+Stack trace:
+#0 /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /vagrant_data/58itbook/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant_data/58itbook/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2019-04-02 01:31:01 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+2019-04-02 01:31:01 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:31:00 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/dowebok/index/js/swiper.min.js.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168660.8171
+    'REQUEST_TIME' => 1554168660
+]
+2019-04-02 01:31:04 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+    in /vagrant_data/58itbook/frontend/controllers/SiteController.php:46
+2019-04-02 01:31:04 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:31:03 [192.168.33.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://www.58itbook.com/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168663.4025
+    'REQUEST_TIME' => 1554168663
+]
+2019-04-02 01:31:04 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Request.php:284
+Stack trace:
+#0 /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /vagrant_data/58itbook/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant_data/58itbook/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2019-04-02 01:31:04 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+2019-04-02 01:31:04 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:31:04 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/dowebok/index/js/swiper.min.js.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168664.6906
+    'REQUEST_TIME' => 1554168664
+]
+2019-04-02 01:31:58 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+    in /vagrant_data/58itbook/frontend/controllers/SiteController.php:46
+2019-04-02 01:31:58 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:31:57 [192.168.33.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://www.58itbook.com/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168717.6453
+    'REQUEST_TIME' => 1554168717
+]
+2019-04-02 01:31:58 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Request.php:284
+Stack trace:
+#0 /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /vagrant_data/58itbook/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant_data/58itbook/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2019-04-02 01:31:58 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+2019-04-02 01:31:58 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:31:58 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/dowebok/index/js/swiper.min.js.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168718.2675
+    'REQUEST_TIME' => 1554168718
+]
+2019-04-02 01:32:18 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+    in /vagrant_data/58itbook/frontend/controllers/SiteController.php:46
+2019-04-02 01:32:19 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:32:18 [192.168.33.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://www.58itbook.com/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168738.4984
+    'REQUEST_TIME' => 1554168738
+]
+2019-04-02 01:32:19 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Request.php:284
+Stack trace:
+#0 /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /vagrant_data/58itbook/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant_data/58itbook/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2019-04-02 01:32:19 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+2019-04-02 01:32:19 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:32:19 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/dowebok/index/js/swiper.min.js.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168739.1981
+    'REQUEST_TIME' => 1554168739
+]
+2019-04-02 01:32:33 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+    in /vagrant_data/58itbook/frontend/controllers/SiteController.php:46
+2019-04-02 01:32:33 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:32:33 [192.168.33.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://www.58itbook.com/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168753.473
+    'REQUEST_TIME' => 1554168753
+]
+2019-04-02 01:32:34 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Request.php:284
+Stack trace:
+#0 /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /vagrant_data/58itbook/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant_data/58itbook/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2019-04-02 01:32:34 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+2019-04-02 01:32:34 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:32:34 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/dowebok/index/js/swiper.min.js.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168754.0133
+    'REQUEST_TIME' => 1554168754
+]
+2019-04-02 01:32:49 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+    in /vagrant_data/58itbook/frontend/controllers/SiteController.php:46
+2019-04-02 01:32:49 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:32:49 [192.168.33.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://www.58itbook.com/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168769.5833
+    'REQUEST_TIME' => 1554168769
+]
+2019-04-02 01:32:50 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Request.php:284
+Stack trace:
+#0 /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /vagrant_data/58itbook/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant_data/58itbook/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2019-04-02 01:32:50 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+2019-04-02 01:32:50 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:32:50 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/dowebok/index/js/swiper.min.js.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168770.1824
+    'REQUEST_TIME' => 1554168770
+]
+2019-04-02 01:33:01 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+    in /vagrant_data/58itbook/frontend/controllers/SiteController.php:46
+2019-04-02 01:33:01 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:33:01 [192.168.33.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://www.58itbook.com/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168781.187
+    'REQUEST_TIME' => 1554168781
+]
+2019-04-02 01:33:01 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Request.php:284
+Stack trace:
+#0 /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /vagrant_data/58itbook/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant_data/58itbook/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2019-04-02 01:33:01 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+2019-04-02 01:33:01 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:33:01 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/dowebok/index/js/swiper.min.js.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168781.8045
+    'REQUEST_TIME' => 1554168781
+]
+2019-04-02 01:33:37 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+    in /vagrant_data/58itbook/frontend/controllers/SiteController.php:46
+2019-04-02 01:33:37 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:33:37 [192.168.33.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://www.58itbook.com/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168817.4664
+    'REQUEST_TIME' => 1554168817
+]
+2019-04-02 01:33:38 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Request.php:284
+Stack trace:
+#0 /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /vagrant_data/58itbook/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant_data/58itbook/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2019-04-02 01:33:38 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+2019-04-02 01:33:38 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:33:38 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/dowebok/index/js/swiper.min.js.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '52738'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168818.1786
+    'REQUEST_TIME' => 1554168818
+]
+2019-04-02 01:35:20 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+    in /vagrant_data/58itbook/frontend/controllers/SiteController.php:46
+2019-04-02 01:35:20 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:35:19 [192.168.33.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '53159'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://www.58itbook.com/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168919.8562
+    'REQUEST_TIME' => 1554168919
+]
+2019-04-02 01:35:20 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Request.php:284
+Stack trace:
+#0 /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /vagrant_data/58itbook/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant_data/58itbook/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2019-04-02 01:35:20 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+2019-04-02 01:35:20 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:35:20 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/dowebok/index/js/swiper.min.js.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '53159'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168920.4856
+    'REQUEST_TIME' => 1554168920
+]
+2019-04-02 01:35:48 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+    in /vagrant_data/58itbook/frontend/controllers/SiteController.php:46
+2019-04-02 01:35:49 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:35:48 [192.168.33.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '53159'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://www.58itbook.com/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168948.5093
+    'REQUEST_TIME' => 1554168948
+]
+2019-04-02 01:35:49 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Request.php:284
+Stack trace:
+#0 /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /vagrant_data/58itbook/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant_data/58itbook/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2019-04-02 01:35:49 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+2019-04-02 01:35:49 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:35:49 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/dowebok/index/js/swiper.min.js.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '53159'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554168949.1895
+    'REQUEST_TIME' => 1554168949
+]
+2019-04-02 01:37:41 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+    in /vagrant_data/58itbook/frontend/controllers/SiteController.php:46
+2019-04-02 01:37:41 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:37:41 [192.168.33.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '53375'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://www.58itbook.com/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554169061.2269
+    'REQUEST_TIME' => 1554169061
+]
+2019-04-02 01:37:42 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Request.php:284
+Stack trace:
+#0 /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /vagrant_data/58itbook/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant_data/58itbook/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2019-04-02 01:37:42 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+2019-04-02 01:37:42 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:37:42 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/dowebok/index/js/swiper.min.js.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '53376'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554169062.2534
+    'REQUEST_TIME' => 1554169062
+]
+2019-04-02 01:38:40 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+    in /vagrant_data/58itbook/frontend/controllers/SiteController.php:46
+2019-04-02 01:38:40 [192.168.33.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:38:40 [192.168.33.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '53386'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://www.58itbook.com/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554169120.1961
+    'REQUEST_TIME' => 1554169120
+]
+2019-04-02 01:38:41 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Request.php:284
+Stack trace:
+#0 /vagrant_data/58itbook/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /vagrant_data/58itbook/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /vagrant_data/58itbook/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2019-04-02 01:38:41 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+    in /vagrant_data/58itbook/frontend/views/layouts/index.php:74
+2019-04-02 01:38:41 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.33.1
+2019-04-02 01:38:41 [192.168.33.1][-][k7n5n11ljj1bico0rlepnjmic3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'k7n5n11ljj1bico0rlepnjmic3'
+    '_csrf-frontend' => '981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU\";}'
+    'PHPSESSID' => '6d8a7vc305ec71sc1vls1045n1'
+    'ckCsrfToken' => '22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4'
+    'UM_distinctid' => '169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871'
+    'CNZZDATA1253231826' => '827226772-1554097442-|1554097442'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'userInfo' => '{\"uId\":\"32\",\"userName\":\"wfx\",\"password\":\"$2y$13$8wc1Ic3nowCIsk0TPDelDe1vo.twdhy0XcV3EUwCnvxZOnAMvgegO\",\"photo\":\"img\\/user.gif\",\"address\":\"\",\"cName\":\"\",\"phone\":\"\",\"email\":\"2579552905@qq.com\",\"github\":\"\",\"qq\":\"\",\"wechat\":\"\",\"sex\":\"2\",\"level\":\"1\",\"levelName\":\"\\u5c0f\\u767d\\u671f\",\"reputation\":\"0\",\"lucky\":\"0\",\"experience\":\"0\",\"ITmoney\":\"0\",\"money\":\"0\",\"status\":\"0\",\"isDelete\":\"0\",\"registerTime\":\"2019-03-20 03:00:17\",\"logoutTime\":\"1554116463\",\"loginTime\":\"1553050817\",\"isSystem\":\"1\",\"updateTime\":\"1554116150\",\"salt\":\"U0CFDs_M8k8-WY0g9id283BjOHZ367Wa\",\"label\":\"\",\"introduction\":null}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/dowebok/index/js/swiper.min.js.map'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/vagrant_data/58itbook/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'REMOTE_ADDR' => '192.168.33.1'
+    'REMOTE_PORT' => '53387'
+    'SERVER_ADDR' => '192.168.33.10'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.58itbook.com'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/vagrant_data/58itbook/frontend/web/index.php'
+    'HTTP_HOST' => 'www.58itbook.com'
+    'HTTP_PROXY_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=k7n5n11ljj1bico0rlepnjmic3; _csrf-frontend=981ebbafe74b21b1afbcd18513cdcec96cc29696509a2f8fdf64b7bb4422d093a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pbdPLkaUDvaQjuioJcqkBrzeO8TJCUuU%22%3B%7D; PHPSESSID=6d8a7vc305ec71sc1vls1045n1; ckCsrfToken=22BmFL1s7XdI27pmhkZ6j3ASVcaJvpaC1RgwprX4; UM_distinctid=169d77d05708df-04aa37ff530d84-7a1437-1fa400-169d77d0571871; CNZZDATA1253231826=827226772-1554097442-%7C1554097442'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1554169121.1488
+    'REQUEST_TIME' => 1554169121
+]

@@ -243,19 +243,18 @@ body .swiper-container { float: left; width: 824px;}
     margin-top: 45px;
 }
 .userPhoto li{
-    padding-top: 5px;
-    padding-bottom: 5px;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
-}
-.userPhoto li a{
-
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .userPhoto li:hover{
     background-color: #21B384;
 }
+.userPhoto li a{
+    text-decoration: none;
+    padding: 10px 22px 10px 22px;
+}
 .userPhoto li a:hover{
     color: white;
-    text-underline: none!important;
-
 }
