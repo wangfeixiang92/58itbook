@@ -51,7 +51,7 @@ class WebController extends CommonController
             ->join('left join',"$subjectRelation l","s.id = l.webId")
             ->select('s.*,u.userName')
             ->where($map);
-        $subjectObj->orderBy ? $total = $total->orderBy([$subjectObj->orderBy=>SORT_DESC])->count() : $total->count();
+        $subjectObj->orderBy ? $total = $total->orderBy([$subjectObj->orderBy=>SORT_DESC])->count() :$total= $total->count();
 
         $webList = DbWebSource::find()
             ->alias('s')
@@ -65,6 +65,7 @@ class WebController extends CommonController
             $v['analysisBrowseNum']=CommonHelper::getAnalysisNum($v['browseNum']);
             $v['analysisDownloadNum']=CommonHelper::getAnalysisNum($v['downloadNum']);
         }
+
         return $this->render('index',['subjectObj'=>$subjectObj,'webList'=>$webList,'total'=>$total]);
     }
 

@@ -33,6 +33,7 @@ class webSubject extends Model
                     [['id','sort','isDelete','pid','level','subjectId'],'integer'],
                     [['orderBy'], 'in', 'range' => ['browseNum', 'downloadNum', 'collectionNum','likeNum','commentNum']],
                     ['page','number','min'=>1]
+
                 ];
 
     }
