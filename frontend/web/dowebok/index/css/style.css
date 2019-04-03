@@ -255,6 +255,72 @@ body .swiper-container { float: left; width: 824px;}
     text-decoration: none;
     padding: 10px 22px 10px 22px;
 }
-.userPhoto li a:hover{
+.userPhoto li a:hover {
     color: white;
+}
+.tt3{
+    height: 170px;
+    margin: 20px 0 20px;
+    line-height: 44px;
+    background: white;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+
+.tt3 .subject-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+.tt3 .subject-list li{
+    margin-left: 20px;
+}
+.tt3 .subject-list li:first-child{
+    font-weight: bold;
+    color: #666;
+}
+
+.tt3 .subject-list li a{
+    padding: 5px;
+    text-decoration: none;
+}
+.tt3 .subject-list li .active{
+    color: white;
+    background: #21B384;
+}
+.tt4{
+    margin: 10px 0 20px;
+    line-height: 10px;
+    background: white;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    height: 10px;
+}
+.tt4 ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+.tt4  li{
+    margin-left: 20px;
+}
+
+.tt4  li:first-child{
+    font-weight: bold;
+    color: #666;
+}
+
+.tt4  li a{
+    padding: 5px;
+    text-decoration: none;
+}
+.tt4  li .active{
+    color: white;
+    background: #21B384;
 }

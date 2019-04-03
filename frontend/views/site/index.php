@@ -1,4 +1,4 @@
-﻿
+
 
 <div class="main">
 	<div class="slidebar">
@@ -50,10 +50,10 @@
 		<h2>网站模板</h2>
 		<span>
             <?php foreach ($webSubject as $v):?>
-            <a href="<?=\yii\helpers\Url::to(['web/list','subjectId'=>$v['id']])?>"><?= $v['name'];?></a>
+            <a href="<?=\yii\helpers\Url::to(['web/index','subjectId'=>$v['id']])?>"><?= $v['name'];?></a>
             <?php endforeach;?>
         </span>
-        <span style="float: right;margin-right: 20px;text-decoration: underline;"><a style="color: #21B384;"  href="" >更多</a></span>
+        <span style="float: right;margin-right: 20px;text-decoration: underline;"><a style="color: #21B384;"  href="<?=\yii\helpers\Url::to(['web/index'])?>" >更多</a></span>
 	</div>
 	<ul class="list1">
         <?php foreach ($webList as $v):?>
@@ -79,10 +79,10 @@
         <h2>网站模板</h2>
         <span>
             <?php foreach ($webSubject as $v):?>
-                <a href="<?=\yii\helpers\Url::to(['web/list','subjectId'=>$v['id']])?>"><?= $v['name'];?></a>
+                <a href="<?=\yii\helpers\Url::to(['web/index','subjectId'=>$v['id']])?>"><?= $v['name'];?></a>
             <?php endforeach;?>
         </span>
-        <span style="float: right;margin-right: 20px;text-decoration: underline;"><a style="color: #21B384;"  href="" >更多</a></span>
+        <span style="float: right;margin-right: 20px;text-decoration: underline;"><a style="color: #21B384;"  href="<?=\yii\helpers\Url::to(['web/index'])?>" >更多</a></span>
     </div>
     <ul class="list1">
         <?php foreach ($webList as $v):?>

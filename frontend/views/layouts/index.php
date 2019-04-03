@@ -19,22 +19,24 @@ use yii\widgets\Breadcrumbs;
     <title> <?=isset($this->params['seo']['title'])?Html::encode($this->params['seo']['title']):'';?></title>
     <meta name="keywords" content="<?=isset($this->params['seo']['keywords'])?Html::encode($this->params['seo']['keywords']):'';?>" />
     <meta name="description" content="<?=isset($this->params['seo']['description'])?Html::encode($this->params['seo']['description']):'';?>" />
-    <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('font-awesome-4.7.0/css/font-awesome.min.css') ?>">
-    <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/css/style.css') ?>">
-    <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/css/swiper.min.css') ?>">
+    <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('/font-awesome-4.7.0/css/font-awesome.min.css') ?>">
+    <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('/dowebok/index/css/style.css') ?>">
+    <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('/dowebok/index/css/swiper.min.css') ?>">
 <!--    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="<?= \common\models\CommonHelper::getAssetUrl('/layui/css/layui.css') ?>"  media="all">
+    <script src="<?= \common\models\CommonHelper::getAssetUrl('/layui/layui.js')?>" charset="utf-8"></script>
+    <script src="<?= \common\models\CommonHelper::getAssetUrl('/js/common.js')?>" charset="utf-8"></script>
     <!--[if lt IE 9]>
-    <script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/html5shiv.js')?>"></script>
+    <script src="<?= \common\models\CommonHelper::getAssetUrl('/dowebok/index/js/html5shiv.js')?>"></script>
     <![endif]-->
 <!--    <script src="dowebok/js/wb.js"></script>-->
-
 </head>
 <body>
 <header class="hd">
     <h1><a href="/" title="58itbook">58itbook</a></h1>
     <ul class="nav">
-        <li><a class="cur" href="/" title="首页">首页</a></li>
-        <li><a href="/code" title="代码">网站模板</a></li>
+        <li><a class="<?= Yii::$app->controller->id == 'site'? 'cur':''; ?>" href="/" title="首页">首页</a></li>
+        <li><a href="<?=\yii\helpers\Url::to(['web/index'])?>" class="<?= Yii::$app->controller->id == 'web'? 'cur':''; ?>" title="代码">网站模板</a></li>
         <li><a href="javascript:alert('禁止入内')">素材插件</a></li>
         <li><a href="javascript:alert('禁止入内')">工具类库</a></li>
         <li><a href="javascript:alert('禁止入内')">IT社区</a></li>
@@ -68,22 +70,17 @@ use yii\widgets\Breadcrumbs;
     </div>
 </header>
 <?php $this->beginBody() ?>
-
-    <?= $content ?>
-
+<?= $content ?>
 <?php $this->endBody() ?>
 <footer class="ft">
     <p>&copy; CopyRight 2079 itbook.com <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备14034220号-1</a></p>
 </footer>
 
-<script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/jquery.min.js')?>"></script>
-<script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/swiper.min.js')?>"></script>
-<script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/script.js')?>"></script>
-<script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/base.js')?>"></script>
-<div style="display:none">
-    <script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/z_stat.js')?>"></script>
-    <script src="<?= \common\models\CommonHelper::getAssetUrl('dowebok/index/js/hm.js')?>"></script>
-</div>
+<script src="<?= \common\models\CommonHelper::getAssetUrl('/dowebok/index/js/jquery.min.js')?>"></script>
+<script src="<?= \common\models\CommonHelper::getAssetUrl('/dowebok/index/js/swiper.min.js')?>"></script>
+<script src="<?= \common\models\CommonHelper::getAssetUrl('/dowebok/index/js/script.js')?>"></script>
+<script src="<?= \common\models\CommonHelper::getAssetUrl('/dowebok/index/js/base.js')?>"></script>
+
 </body>
 </html>
 <?php $this->endPage() ?>

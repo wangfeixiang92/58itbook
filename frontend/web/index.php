@@ -14,4 +14,5 @@ $config = yii\helpers\ArrayHelper::merge(
     require __DIR__ . '/../config/main-local.php'
 );
 Yii::$app->log->targets['debug'] = null;
+
 (new yii\web\Application($config))->run();

@@ -62,15 +62,3 @@ var URLHandle=(function(urlhandle){
     return urlhandle;
 }(URLHandle||{}));
 var Urlobj = new URLHandle.URL(window.location.href);
-
-function randomNum(Min,Max){
-
-    var Range = Max - Min;
-
-    var Rand = Math.random();
-
-    var num = Min + Math.round(Rand * Range); //四舍五入
-
-    return num;
-
-}
