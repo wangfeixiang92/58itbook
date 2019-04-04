@@ -5,7 +5,11 @@
  * */
 namespace frontend\models;
 
+use common\models\CommonHelper;
+use common\models\DbUser;
 use common\models\DbWebSource;
+use common\models\DbWebSubject;
+use common\models\DbWebSubRelation;
 use Yii;
 use yii\base\Model;
 /**
@@ -109,7 +113,57 @@ class WebSource extends Model
         }
     }
 
+    //获取资源信息
+    public function getInfo(){
+        $userTable = DbUser::tableName();
+        $subjectRelation = DbWebSubRelation::tableName();
+        $subject = DbWebSubject::tableName();
+        $map['s.status']=1;
+        $map['s.isDelete']=0;
+        $map['s.id']=$this->id;
+        $info = DbWebSource::find()
+            ->alias('s')
+            ->join('left join',"$userTable u",'s.uId = u.uId')
+            ->select('s.*,u.userName')
+            ->where($map)
+            ->asArray()
+            ->one();
+        $info['subjectList'] = DbWebSubRelation::find()
+            ->alias('l')
+            ->join('inner join',"$subject s","l.subId = s.id")
+            ->select('l.*,s.name')
+            ->where(["l.webId"=>$info['id'],'l.isDelete'=>0,'l.level'=>0])
+            ->asArray()
+            ->all();
+        $info['registerDate'] = CommonHelper::getRegisetrDate($info['registerTime']);
+        $info['analysisBrowseNum']=CommonHelper::getAnalysisNum($info['browseNum']);
+        $info['analysisDownloadNum']=CommonHelper::getAnalysisNum($info['downloadNum']);
+        $info['analysisCollectionNum']=CommonHelper::getAnalysisNum($info['collectionNum']);
+        $info['analysisLikeNum']=CommonHelper::getAnalysisNum($info['likeNum']);
+        $info['analysisCommentNum']=CommonHelper::getAnalysisNum($info['commentNum']);
+        $info['analysisShareNum']=CommonHelper::getAnalysisNum($info['shareNum']);
+      return $info;
+    }
 
+
+    //获取推荐
+    public function getRecommend($webId,$pid){
+        $userTable = DbUser::tableName();
+        $subjectRelation = DbWebSubRelation::tableName();
+        $map['s.status']=1;
+        $map['s.isDelete']=0;
+        $map['l.subId'] =$pid;
+         return DbWebSource::find()
+            ->alias('s')
+            ->join('left join',"$userTable u",'s.uId = u.uId')
+            ->join('left join',"$subjectRelation l","s.id = l.webId")
+            ->select('s.*,u.userName')
+            ->where($map)
+             ->andWhere(['<>','l.webId',$webId])
+            ->limit(12)
+             ->asArray()
+             ->all();
+    }
 
     public function addWebSource()
     {

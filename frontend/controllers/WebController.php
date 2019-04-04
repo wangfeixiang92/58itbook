@@ -66,6 +66,7 @@ class WebController extends CommonController
             $v['analysisDownloadNum']=CommonHelper::getAnalysisNum($v['downloadNum']);
         }
 
+
         return $this->render('index',['subjectObj'=>$subjectObj,'webList'=>$webList,'total'=>$total]);
     }
 
@@ -75,14 +76,16 @@ class WebController extends CommonController
      * */
 
     public function actionDetail(){
-        $this->layout='web-detail';
         $model = new WebSource();
-        $model->load(Yii::$app->request->get('id'), '');
+        $model->scenario='detail';
+        $model->load(Yii::$app->request->queryParams, '');
         $checkRes = $model->validate();
         if (!$checkRes) {
             throw new HttpException(404);
         }
-        return $this->render('detail');
+       $info = $model->getInfo();
+        $recommond = $model->getRecommend($info['id'],$info['subjectList'][0]['subId']);
+        return $this->render('detail',['info'=>$info,'recommond'=>$recommond]);
     }
 
 
