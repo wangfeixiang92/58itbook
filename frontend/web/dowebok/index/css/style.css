@@ -241,6 +241,7 @@ body .swiper-container { float: left; width: 824px;}
     text-align: center;
     width: 100px;
     margin-top: 45px;
+    border: 1px solid lightgray;
 }
 .userPhoto li{
     border-bottom: 1px solid #ddd;
@@ -323,4 +324,128 @@ body .swiper-container { float: left; width: 824px;}
 .tt4  li .active{
     color: white;
     background: #21B384;
+}
+.author-info-img,.author-info{
+    text-align: center;
+}
+
+.author-info-img img{
+    margin-top: 25px;
+    border-radius: 50%;
+}
+
+.author-info h4{
+    margin: 10px;
+    font-weight: bold;
+}
+.author-info address{
+    font-style: normal;
+    color: gray;
+}
+.userinfo-function{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.userinfo-function a{
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 10px;
+    text-decoration: none;
+    border: 1px solid #C9C9C9;
+    background-color: #fff;
+    color: #555;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.userinfo-function a:hover{
+    background-color: #009688;
+    color: white;
+}
+.userinfo-function a i{
+    margin-right: 3px;
+}
+.comment-list-body{
+    margin-top: 25px;
+}
+.comment-author-info-img img{
+    border-radius: 50%;
+}
+.comment-author-info{
+    margin-left: 10px;
+}
+.comment-author-info-img,.comment-author-info-name{
+    float: left;
+}
+.comment-author-info-name{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.comment-author-info-name a{
+    font-weight: bold;
+    text-decoration: none;
+}
+.comment-author-info-time{
+    margin-top: 5px;
+}
+
+.comment-info-message{
+    clear: both;
+    padding-top: 20px;
+}
+.comment-info-tools{
+    margin-top: 10px;
+}
+.comment-info-tools-block{
+    position: relative;
+    left:80%
+}
+.comment-info-tools span{
+    font-size: 15px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+.comment-info-tools span:hover{
+    color: #FF5722;
+}
+.comment-child-list{
+    margin-left: 3%;
+    font-size: 5px;
+}
+.comment-child-list .comment-author-info{
+    margin-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.comment-child-list img{
+    max-width: 60%;
+}
+.comment-child-list .comment-author-info-name{
+    margin-left: -10px;
+    margin-top: 0px;
+}
+.comment-child-list .comment-info-message{
+    padding-top: 10px;
+}
+.comment-child-list .comment-info-tools{
+    margin-top: 0px;
+    padding-bottom: 4px;
+}
+.comment-child-list .comment-info-tools span{
+    font-size: 10px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.comment-child-list .comment-info-tools span:hover{
+    color: #FF5722;
+}
+.comment-child-list .comment-info-tools-block{
+    left: 82%;
 }

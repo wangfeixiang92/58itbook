@@ -56,14 +56,74 @@
         </div>
 
         <section class="xg">
-            <h2 class="tt1"><span>相关文章</span></h2>
-            <ul class="list2">
-                <?php foreach ($recommond as $v):?>
-                <li>
-                    <a href="<?=\yii\helpers\Url::to(['web/'.$v['id']])?>" title="<?= $v['title']?>"><img src="<?=    Yii::$app->params['domain']['pic'].$v['coverUrl']?>" alt="<?= $v['title']?>"></a>
-                    <h4><a href="<?=\yii\helpers\Url::to(['web/'.$v['id']])?>" title="<?= $v['title']?>"><?= $v['title']?></a></h4>
+            <h2 class="tt1"><span>相关评论(共6条评论)</span></h2>
+            <ul class="comment-list-body">
+                <li class="comment-author-info">
+                    <a href="#" class="comment-author-info-img">
+                        <img src="/img/user.gif">
+                    </a>
+                    <div class="comment-author-info-name">
+                        <a href="#">王大锤</a>
+                        <div class="comment-author-info-time"><span class="layui-badge layui-bg-green">4楼</span>· 2019.03.31 18:56</div>
+                    </div>
+                    <p class="comment-info-message">爱卿，此意是当诛杀此逆臣？朕早有此意。卿可在酒席上听我摔杯为号</p>
+                    <div class="comment-info-tools">
+                        <div class="comment-info-tools-block">
+                            <span><i class=" fa fa-thumbs-o-up"></i>点赞</span>
+                            <span><i class=" fa fa-comment-o"></i>回复</span>
+                        </div>
+                    </div>
+                    <ul class="comment-child-list">
+                        <li class="comment-author-info">
+                            <a href="#" class="comment-author-info-img">
+                                <img src="/img/user.gif">
+                            </a>
+                            <div class="comment-author-info-name">
+                                <a href="#">王大锤</a>
+                                <div class="comment-author-info-time"> 2019.03.31 18:56</div>
+                            </div>
+                            <p class="comment-info-message">爱卿，此意是当诛杀此逆臣？朕早有此意。卿可在酒席上听我摔杯为号</p>
+                            <div class="comment-info-tools">
+                                <div class="comment-info-tools-block">
+                                    <span><i class=" fa fa-thumbs-o-up"></i>点赞</span>
+                                    <span><i class=" fa fa-comment-o"></i>回复</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="comment-author-info">
+                            <a href="#" class="comment-author-info-img">
+                                <img src="/img/user.gif">
+                            </a>
+                            <div class="comment-author-info-name">
+                                <a href="#">王大锤</a>
+                                <div class="comment-author-info-time"> 2019.03.31 18:56</div>
+                            </div>
+                            <p class="comment-info-message">爱卿，此意是当诛杀此逆臣？朕早有此意。卿可在酒席上听我摔杯为号</p>
+                            <div class="comment-info-tools">
+                                <div class="comment-info-tools-block">
+                                    <span><i class=" fa fa-thumbs-o-up"></i>点赞</span>
+                                    <span><i class=" fa fa-comment-o"></i>回复</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="comment-author-info">
+                            <a href="#" class="comment-author-info-img">
+                                <img src="/img/user.gif">
+                            </a>
+                            <div class="comment-author-info-name">
+                                <a href="#">王大锤</a>
+                                <div class="comment-author-info-time"> 2019.03.31 18:56</div>
+                            </div>
+                            <p class="comment-info-message">爱卿，此意是当诛杀此逆臣？朕早有此意。卿可在酒席上听我摔杯为号</p>
+                            <div class="comment-info-tools">
+                                <div class="comment-info-tools-block">
+                                    <span><i class=" fa fa-thumbs-o-up"></i>点赞</span>
+                                    <span><i class=" fa fa-comment-o"></i>回复</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </li>
-                <?php endforeach;?>
             </ul>
         </section>
 
@@ -72,54 +132,34 @@
 
     <div class="secondary">
         <aside>
-            <h3><span>热门文章</span></h3>
-            <ul class="list3">
-                <li><a href="http://www.dowebok.com/77.html" title="jQuery全屏滚动插件fullPage.js"><img src="picture/77s.png" alt="jQuery全屏滚动插件fullPage.js"></a><a href="http://www.dowebok.com/77.html">jQuery全屏滚动插件fullPage.js</a></li>
-                <li><a href="http://www.dowebok.com/143.html" title="全屏/整屏滚动组件fullPage"><img src="picture/143s.png" alt="全屏/整屏滚动组件fullPage"></a><a href="http://www.dowebok.com/143.html">全屏/整屏滚动组件fullPage</a></li>
-                <li><a href="http://www.dowebok.com/131.html" title="WOW.js &#8211; 让页面滚动更有趣"><img src="picture/131s.png" alt="WOW.js &#8211; 让页面滚动更有趣"></a><a href="http://www.dowebok.com/131.html">WOW.js &#8211; 让页面滚动更有趣</a></li>
-                <li><a href="http://www.dowebok.com/97.html" title="fullPage.js制作网易邮箱6.0介绍页面"><img src="picture/97s.jpg" alt="fullPage.js制作网易邮箱6.0介绍页面"></a><a href="http://www.dowebok.com/97.html">fullPage.js制作网易邮箱6.0介绍页面</a></li>
-                <li><a href="http://www.dowebok.com/98.html" title="animate.css &#8211; 齐全的CSS3动画库"><img src="picture/98.png" alt="animate.css &#8211; 齐全的CSS3动画库"></a><a href="http://www.dowebok.com/98.html">animate.css &#8211; 齐全的CSS3动画库</a></li>
-            </ul>
+            <p class="author-info-img">
+                <a href="#">
+                    <img src="/img/user.gif">
+                </a>
+            </p>
+            <a href="" class="author-info" style=" text-decoration: none;">
+                <h4>王大锤</h4>
+                <address><i class="fa fa-map-marker"></i>上海市静安区中山北路</address>
+            </a>
+            <div class="userinfo-function">
+                <a class="btn" ><i class="fa  fa-plus-circle right5per"></i>关注作者</a>
+                <a class="btn"> <i class="fa fa-telegram right5per"></i>私信作者</a>
+                <a class="btn"><i class="fa fa-heart right5per"></i>收藏插件</a>
+            </div>
         </aside>
 
         <aside>
             <h3><span>随机推荐</span></h3>
             <ul class="list3">
+                <?php foreach ($recommond as $v):?>
                 <li>
-                    <a href="http://www.dowebok.com/251.html" title="母亲节可爱心形背景矢量素材(EPS/AI)"><img src="picture/251s.png" alt="母亲节可爱心形背景矢量素材(EPS/AI)"></a>
-                    <a href="http://www.dowebok.com/251.html">母亲节可爱心形背景矢量素材(EPS/AI)</a>
+                    <a href="<?=\yii\helpers\Url::to(['web/'.$v['id']])?>" title="<?= $v['title']?>"><img src="<?=    Yii::$app->params['domain']['pic'].$v['coverUrl']?>" alt="<?= $v['title']?>"></a>
+                    <a href="<?=\yii\helpers\Url::to(['web/'.$v['id']])?>"><?= $v['title']?></a>
                 </li>
-                <li>
-                    <a href="http://www.dowebok.com/613.html" title="太空飞船设计404错误页面(EPS/AI)"><img src="picture/613s.png" alt="太空飞船设计404错误页面(EPS/AI)"></a>
-                    <a href="http://www.dowebok.com/613.html">太空飞船设计404错误页面(EPS/AI)</a>
-                </li>
-                <li>
-                    <a href="http://www.dowebok.com/2000.html" title="万圣节元素矢量素材(PNG)"><img src="picture/2000s.jpg" alt="万圣节元素矢量素材(PNG)"></a>
-                    <a href="http://www.dowebok.com/2000.html">万圣节元素矢量素材(PNG)</a>
-                </li>
-                <li>
-                    <a href="http://www.dowebok.com/1117.html" title="旅游元素逼真地图矢量素材(EPS/AI/PNG)"><img src="picture/1117s.png" alt="旅游元素逼真地图矢量素材(EPS/AI/PNG)"></a>
-                    <a href="http://www.dowebok.com/1117.html">旅游元素逼真地图矢量素材(EPS/AI/PNG)</a>
-                </li>
-                <li>
-                    <a href="http://www.dowebok.com/1491.html" title="多彩灯笼中秋节背景矢量素材(AI/SVG)"><img src="picture/1491s.jpg" alt="多彩灯笼中秋节背景矢量素材(AI/SVG)"></a>
-                    <a href="http://www.dowebok.com/1491.html">多彩灯笼中秋节背景矢量素材(AI/SVG)</a>
-                </li>
-
+                <?php endforeach;?>
             </ul>
         </aside>
 
-        <aside class="ad300x250">
-            <!-- <script>
-            var cpro_id = "u2131715";
-            </script>
-            <script src="js/c.js"></script> -->
 
-
-            <script type="text/javascript">
-                var cpro_id = "u3178191";
-            </script>
-            <script src="js/c.js"></script>
-        </aside>
     </div>
 </div>
