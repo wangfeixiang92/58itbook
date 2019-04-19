@@ -54,6 +54,13 @@ body{
 .center{
     text-align: center;
 }
+.floatright{
+    float: right;
+}
+.floatleft{
+    float: left;
+}
+
 .error-label{
     color: #d9534f;
 }

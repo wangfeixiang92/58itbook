@@ -7,6 +7,7 @@ namespace frontend\models;
 
 use common\models\CommonHelper;
 use common\models\DbUser;
+use common\models\DbWebComment;
 use common\models\DbWebSource;
 use common\models\DbWebSubject;
 use common\models\DbWebSubRelation;
@@ -135,6 +136,14 @@ class WebSource extends Model
             ->where(["l.webId"=>$info['id'],'l.isDelete'=>0,'l.level'=>0])
             ->asArray()
             ->all();
+        $info['commentList'] =DbWebComment::find()
+            ->alias('c')
+            ->select("c.*,u.userName,u.photo")
+            ->join("left join","$userTable u",'c.uId = u.uId')
+            ->where(['webId'=>$this->id])
+            ->asArray()
+            ->all();
+
         $info['registerDate'] = CommonHelper::getRegisetrDate($info['registerTime']);
         $info['analysisBrowseNum']=CommonHelper::getAnalysisNum($info['browseNum']);
         $info['analysisDownloadNum']=CommonHelper::getAnalysisNum($info['downloadNum']);

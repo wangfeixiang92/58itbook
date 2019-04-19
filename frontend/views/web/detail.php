@@ -124,10 +124,79 @@
                         </li>
                     </ul>
                 </li>
+                <li class="comment-author-info">
+                    <a href="#" class="comment-author-info-img">
+                        <img src="/img/user.gif">
+                    </a>
+                    <div class="comment-author-info-name">
+                        <a href="#">王大锤</a>
+                        <div class="comment-author-info-time"><span class="layui-badge layui-bg-green">4楼</span>· 2019.03.31 18:56</div>
+                    </div>
+                    <p class="comment-info-message">爱卿，此意是当诛杀此逆臣？朕早有此意。卿可在酒席上听我摔杯为号</p>
+                    <div class="comment-info-tools">
+                        <div class="comment-info-tools-block">
+                            <span><i class=" fa fa-thumbs-o-up"></i>点赞</span>
+                            <span><i class=" fa fa-comment-o"></i>回复</span>
+                        </div>
+                    </div>
+                    <ul class="comment-child-list">
+                        <li class="comment-author-info">
+                            <a href="#" class="comment-author-info-img">
+                                <img src="/img/user.gif">
+                            </a>
+                            <div class="comment-author-info-name">
+                                <a href="#">王大锤</a>
+                                <div class="comment-author-info-time"> 2019.03.31 18:56</div>
+                            </div>
+                            <p class="comment-info-message">爱卿，此意是当诛杀此逆臣？朕早有此意。卿可在酒席上听我摔杯为号</p>
+                            <div class="comment-info-tools">
+                                <div class="comment-info-tools-block">
+                                    <span><i class=" fa fa-thumbs-o-up"></i>点赞</span>
+                                    <span><i class=" fa fa-comment-o"></i>回复</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="comment-author-info">
+                            <a href="#" class="comment-author-info-img">
+                                <img src="/img/user.gif">
+                            </a>
+                            <div class="comment-author-info-name">
+                                <a href="#">王大锤</a>
+                                <div class="comment-author-info-time"> 2019.03.31 18:56</div>
+                            </div>
+                            <p class="comment-info-message">爱卿，此意是当诛杀此逆臣？朕早有此意。卿可在酒席上听我摔杯为号</p>
+                            <div class="comment-info-tools">
+                                <div class="comment-info-tools-block">
+                                    <span><i class=" fa fa-thumbs-o-up"></i>点赞</span>
+                                    <span><i class=" fa fa-comment-o"></i>回复</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="comment-author-info">
+                            <a href="#" class="comment-author-info-img">
+                                <img src="/img/user.gif">
+                            </a>
+                            <div class="comment-author-info-name">
+                                <a href="#">王大锤</a>
+                                <div class="comment-author-info-time"> 2019.03.31 18:56</div>
+                            </div>
+                            <p class="comment-info-message">爱卿，此意是当诛杀此逆臣？朕早有此意。卿可在酒席上听我摔杯为号</p>
+                            <div class="comment-info-tools">
+                                <div class="comment-info-tools-block">
+                                    <span><i class=" fa fa-thumbs-o-up"></i>点赞</span>
+                                    <span><i class=" fa fa-comment-o"></i>回复</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </section>
-
-
+        <section class="xg">
+            <h2 class="tt1"><span>发表评论</span></h2>
+            <textarea id="userComment" required lay-verify="required" placeholder="说点什么吧" style="height: 200px" class="layui-textarea" webId="<?=$info['id']?>"  ></textarea>
+            <button  class="layui-btn" style="float: right" onclick="sendComment()">发表</button>
+        </section>
     </div>
 
     <div class="secondary">
@@ -159,7 +228,31 @@
                 <?php endforeach;?>
             </ul>
         </aside>
-
-
     </div>
 </div>
+<script>
+
+
+     function sendComment() {
+
+        $.ajax({
+            type: "POST",
+            url: "test.json",
+            data: {username:$("#username").val(), content:$("#content").val()},
+            dataType: "json",
+            success: function(data){
+                $('#resText').empty();   //清空resText里面的所有内容
+                var html = '';
+                $.each(data, function(commentIndex, comment){
+                    html += '<div class="comment"><h6>' + comment['username']
+                        + ':</h6><p class="para"' + comment['content']
+                        + '</p></div>';
+                });
+                $('#resText').html(html);
+            }
+        });
+    }
+
+
+
+</script>

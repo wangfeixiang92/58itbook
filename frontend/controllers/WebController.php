@@ -76,6 +76,7 @@ class WebController extends CommonController
      * */
 
     public function actionDetail(){
+        $this->layout='detail';
         $model = new WebSource();
         $model->scenario='detail';
         $model->load(Yii::$app->request->queryParams, '');
